@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%%% Работа с картинками
+\usepackage{graphicx} % Для вставки рисунков
+\usepackage{wrapfig} % Обтекание рисунков текстом
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable} % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+\usepackage[overload]{empheq} % для рамки в формулах
+
+%%% Страница
+\usepackage{extsizes} % Возможность сделать 14-й шрифт
+\usepackage{geometry} % Простой способ задавать поля
+	\geometry{top=25mm}
+	\geometry{bottom=35mm}
+	\geometry{left=35mm}
+	\geometry{right=20mm}
+
+
+\begin{document}
+
+\section{The Mean Value Theorem: Consequences}
+
+The first thing we apply the MVT to is graphing, but we'll see later that this is significant in all the rest of calculus.
+
+\begin{itemize}
+	\item If $f' > 0$ then $f$ is increasing.
+	\item If $f' < 0$ then $f$ is decreasing.
+	\item If $f' = 0$ then $f$ is constant.
+\end{itemize}
+
+We told you that the first of these two are true, but we didn't prove them. We can now prove them using the MVT.
+
+\textbf{Proof}: The mean value theorem tells us that:
+
+\[
+	\frac{f(b) - f(a)}{b-a} = f'(c) \notag
+\]
+
+For some $c$ between $a$ and $b$. For the purposes of this proof we'll assume that $b > a$.
+We write the equation for the MVT ''backwards'' because we want to use information about $f'$ to get information about $f$. 
+
+We manipulate the equation to get:
+\begin{eqnarray}
+f(a) - f(b) &=& f'(c)(b-a) \notag \\
+f(b) &=& f(a)+f'(c)(b-a) \notag
+\end{eqnarray}
+
+This new form of the MVT will let us check these three facts. 
+
+Since $a<b$, $b-a>0$ and the sign of $f'(c)(b-a)$ is completely determined 
+by the sign of $f'(c)$.
+\begin{itemize}
+	\item If $f'(с) > 0$ then $f(b) > f(a)$.
+	\item If $f'(с) < 0$ then $f(b) < f(a)$.
+	\item If $f'(с) = 0$ then $f(b) = f(a)$.
+\end{itemize}
+
+These facts may seem obvious, but they are not. The definition of the derivative is written in terms of infinitesimals. It's not a sure thing that these infinitesimals have anything to do with the large scale behavior of the function. Before, we were saying that the difference quotient was approximately equal to the derivative. Now we're saying that it's exactly equal to a derivative. (Although we don't know at what point that derivative should be taken.) 
+
+
+\end{document}	
