@@ -1,0 +1,2303 @@
+1
+00:00:00,140 --> 00:00:02,400
+The following content is provided under a
+Creative
+
+2
+00:00:02,400 --> 00:00:07,640
+Commons license. Your support will help MIT
+OpenCourseWare continue to offer high quality
+
+3
+00:00:07,640 --> 00:00:11,290
+educational
+resources for free. To make a donation or
+
+4
+00:00:11,290 --> 00:00:13,870
+to view
+additional materials from hundreds of MIT
+
+5
+00:00:13,870 --> 00:00:23,259
+courses,
+visit MIT OpenCourseWare at ocw.mit.edu.
+
+6
+00:00:23,259 --> 00:00:26,970
+So far we have learned about partial derivatives
+and how to
+
+7
+00:00:26,970 --> 00:00:30,529
+use them to find minima and maxima of functions
+of two
+
+8
+00:00:30,529 --> 00:00:34,980
+variables or several variables. And now we
+are going to try to
+
+9
+00:00:34,980 --> 00:00:41,239
+study, in more detail, how functions of several
+variables behave, how to compete their
+
+10
+00:00:41,239 --> 00:00:47,510
+variations. How to estimate the variation
+in arbitrary directions. And so for that we
+
+11
+00:00:47,510 --> 00:00:52,750
+are going to
+need some more tools actually to study this
+
+12
+00:00:52,750 --> 00:01:04,150
+things.
+More tools to study functions.
+
+13
+00:01:04,150 --> 00:01:30,360
+Today's topic is going to be differentials.
+And, just to motivate that, let me remind
+
+14
+00:01:30,360 --> 00:01:35,119
+you about one
+trick that you probably know from single variable
+
+15
+00:01:35,119 --> 00:01:48,430
+calculus,
+namely implicit differentiation.
+
+16
+00:01:48,430 --> 00:01:56,259
+Let's say that you have a function y equals
+f of x then
+
+17
+00:01:56,259 --> 00:02:05,590
+you would sometimes write dy equals f prime
+of x times dx.
+
+18
+00:02:05,590 --> 00:02:23,069
+And then maybe you would -- 
+
+19
+00:02:23,069 --> 00:02:30,900
+We use implicit differentiation to
+actually relate infinitesimal changes in y
+
+20
+00:02:30,900 --> 00:02:34,769
+with infinitesimal
+changes in x. And one thing we can do with
+
+21
+00:02:34,769 --> 00:02:38,769
+that, for example, is actually figure out
+the rate
+
+22
+00:02:38,769 --> 00:02:43,480
+of change dy by dx, but also the reciprocal
+dx by
+
+23
+00:02:43,480 --> 00:02:57,260
+dy. And so, for example,
+let's say that we have y equals inverse sin(x).
+
+24
+00:02:57,260 --> 00:03:06,379
+Then we can write x equals sin(y).
+And, from there, we can actually find out
+
+25
+00:03:06,379 --> 00:03:08,980
+what
+is the derivative of this function if we didn't
+
+26
+00:03:08,980 --> 00:03:16,519
+know the
+answer already by writing dx equals cosine
+
+27
+00:03:16,519 --> 00:03:25,180
+y dy.
+That tells us that dy over dx is going to
+
+28
+00:03:25,180 --> 00:03:31,950
+be one over cosine
+y. And now cosine for relation to
+
+29
+00:03:31,950 --> 00:03:40,120
+sine is basically one over square root of
+one minus x^2.
+
+30
+00:03:40,120 --> 00:03:42,480
+And that is how you find the formula for the
+derivative of
+
+31
+00:03:42,480 --> 00:03:48,030
+the inverse sine function. A formula that
+you probably
+
+32
+00:03:48,030 --> 00:03:57,439
+already knew, but that is one way to derive
+it. Now we are going to use also
+
+33
+00:03:57,439 --> 00:04:02,599
+these kinds of notations, dx, dy and so on,
+but use them for functions of several variables.
+
+34
+00:04:02,599 --> 00:04:05,010
+And, of course, we will have to learn what
+the
+
+35
+00:04:05,010 --> 00:04:11,000
+rules of manipulation are and what we can
+do with them.
+
+36
+00:04:11,000 --> 00:04:24,380
+The actual name of that is the total differential,
+as opposed to the partial derivatives.
+
+37
+00:04:24,380 --> 00:04:28,720
+The total differential includes all of the
+various causes that
+
+38
+00:04:28,720 --> 00:04:32,820
+can change -- Sorry. All the contributions
+that can
+
+39
+00:04:32,820 --> 00:04:41,720
+cause the value of your function f to change.
+Namely, let's say that you have a function
+
+40
+00:04:41,720 --> 00:04:44,550
+maybe of three
+variables, x, y, z,
+
+41
+00:04:44,550 --> 00:04:55,070
+then you would write df equals f sub x dx
+plus f sub y dy plus
+
+42
+00:04:55,070 --> 00:05:04,160
+f sub z dz. Maybe, just to remind you of
+the other notation, partial f over partial
+
+43
+00:05:04,160 --> 00:05:10,290
+x dx
+plus partial f over partial y dy plus partial
+
+44
+00:05:10,290 --> 00:05:18,640
+f over partial z
+dz. Now, what is this object?
+
+45
+00:05:18,640 --> 00:05:21,810
+What are the things on either side of this
+equality?
+
+46
+00:05:21,810 --> 00:05:26,510
+Well, they are called differentials.
+And they are not numbers, they are not vectors,
+
+47
+00:05:26,510 --> 00:05:28,470
+they are not matrices, they are a different
+kind of
+
+48
+00:05:28,470 --> 00:05:35,120
+object. These things have their own
+rules of manipulations, and we have to learn
+
+49
+00:05:35,120 --> 00:05:40,150
+what we
+can do with them. So how do we think about
+
+50
+00:05:40,150 --> 00:05:51,320
+them?
+First of all, how do we not think about them?
+
+51
+00:05:51,320 --> 00:06:06,470
+Here is an important thing to know.
+Important. df is not the same thing as
+
+52
+00:06:06,470 --> 00:06:14,520
+delta f. That is meant to be a number.
+It is going to be a number once you have a
+
+53
+00:06:14,520 --> 00:06:17,420
+small variation of x,
+a small variation of y, a small variation
+
+54
+00:06:17,420 --> 00:06:20,550
+of z.
+These are numbers. Delta x, delta y and delta
+
+55
+00:06:20,550 --> 00:06:24,700
+z
+are actual numbers, and this becomes a number.
+
+56
+00:06:24,700 --> 00:06:30,070
+This guy actually is not a number.
+You cannot give it a particular value.
+
+57
+00:06:30,070 --> 00:06:32,690
+All you can do with a differential is express
+it in
+
+58
+00:06:32,690 --> 00:06:35,730
+terms of other differentials. In fact, this
+dx,
+
+59
+00:06:35,730 --> 00:06:40,330
+dy and dz, well, they are mostly symbols out
+there. But if you want to think about
+
+60
+00:06:40,330 --> 00:06:46,460
+them, they are the differentials of x, y and
+z.
+
+61
+00:06:46,460 --> 00:06:50,770
+In fact, you can think of these differentials
+as placeholders
+
+62
+00:06:50,770 --> 00:06:55,550
+where you will put other things. Of course,
+they represent,
+
+63
+00:06:55,550 --> 00:06:58,620
+you know, there is this idea of changes in
+x,
+
+64
+00:06:58,620 --> 00:07:06,940
+y, z and f. One way that one could explain
+it, and I don't really like it, is to say
+
+65
+00:07:06,940 --> 00:07:12,130
+they represent
+infinitesimal changes. Another way to say
+
+66
+00:07:12,130 --> 00:07:13,620
+it,
+and I think that is probably closer to the
+
+67
+00:07:13,620 --> 00:07:17,110
+truth,
+is that these things are somehow placeholders
+
+68
+00:07:17,110 --> 00:07:22,650
+to put
+values and get a tangent approximation.
+
+69
+00:07:22,650 --> 00:07:29,900
+For example, if I do replace these symbols
+by delta x, delta y and delta z numbers then
+
+70
+00:07:29,900 --> 00:07:32,760
+I will actually get
+a numerical quantity. And that will be an
+
+71
+00:07:32,760 --> 00:07:37,350
+approximation formula for delta. It will be
+the linear
+
+72
+00:07:37,350 --> 00:07:50,590
+approximation, a tangent plane approximation.
+What we can do -- Well, let me start first
+
+73
+00:07:50,590 --> 00:07:56,320
+with maybe
+something even before that. The first thing
+
+74
+00:07:56,320 --> 00:08:05,020
+that it does is
+it can encode how changes in x, y, z affect
+
+75
+00:08:05,020 --> 00:08:13,690
+the value of f.
+I would say that is the most general answer
+
+76
+00:08:13,690 --> 00:08:17,550
+to what is this
+formula, what are these differentials.
+
+77
+00:08:17,550 --> 00:08:30,860
+It is a relation between x, y, z and f.
+And this is a placeholder for small variations,
+
+78
+00:08:30,860 --> 00:08:48,760
+delta x, delta y and delta z to get an approximation
+formula.
+
+79
+00:08:48,760 --> 00:08:58,240
+Which is delta f is approximately equal to
+fx delta
+
+80
+00:08:58,240 --> 00:09:09,620
+x fy delta y fz delta z. It is getting cramped,
+but I am sure you know what is going on here.
+
+81
+00:09:09,620 --> 00:09:15,570
+And observe how this one is actually equal
+while that one is
+
+82
+00:09:15,570 --> 00:09:19,940
+approximately equal. So they are really not
+the same.
+
+83
+00:09:19,940 --> 00:09:22,090
+Another thing that the notation suggests we
+can do,
+
+84
+00:09:22,090 --> 00:09:26,310
+and they claim we can do, is divide everything
+by some
+
+85
+00:09:26,310 --> 00:09:32,720
+variable that everybody depends on.
+Say, for example, that x, y and z actually
+
+86
+00:09:32,720 --> 00:09:38,420
+depend
+on some parameter t then they will vary, at
+
+87
+00:09:38,420 --> 00:09:42,420
+a certain rate,
+dx over dt, dy over dt, dz over dt.
+
+88
+00:09:42,420 --> 00:09:46,310
+And what the differential will tell us then
+is the rate of
+
+89
+00:09:46,310 --> 00:09:50,260
+change of f as a function of t, when you plug
+in these values
+
+90
+00:09:50,260 --> 00:10:05,320
+of x, y, z, you will get df over dt by
+dividing everything by dt in here.
+
+91
+00:10:05,320 --> 00:10:22,150
+The first thing we can do is divide by something
+like dt to
+
+92
+00:10:22,150 --> 00:10:34,460
+get infinitesimal rate of change.
+Well, let me just say rate of change.
+
+93
+00:10:34,460 --> 00:10:53,200
+df over dt equals f sub x dx over dt plus
+f sub y dy over dt
+
+94
+00:10:53,200 --> 00:10:58,110
+plus f sub z dz over dt. And that corresponds
+to the
+
+95
+00:10:58,110 --> 00:11:10,450
+situation where x is a function of t, y is
+a function of t and z
+
+96
+00:11:10,450 --> 00:11:14,260
+is a function of t. That means you can plug
+in
+
+97
+00:11:14,260 --> 00:11:18,210
+these values into f to get, well, the value
+of f will
+
+98
+00:11:18,210 --> 00:11:27,600
+depend on t, and then you can find the rate
+of change with t of a value of f.
+
+99
+00:11:27,600 --> 00:11:32,910
+These are the basic rules. And this is known
+as the chain
+
+100
+00:11:32,910 --> 00:11:40,790
+rule. It is one instance of a chain
+rule, which tells you when you have a
+
+101
+00:11:40,790 --> 00:11:44,960
+function that depends on something,
+and that something in turn depends on something
+
+102
+00:11:44,960 --> 00:11:49,160
+else,
+how to find the rate of change of a function
+
+103
+00:11:49,160 --> 00:11:53,020
+on the new
+variable in terms of the derivatives of a
+
+104
+00:11:53,020 --> 00:12:01,500
+function and
+also the dependence between the various variables.
+
+105
+00:12:01,500 --> 00:12:10,400
+Any questions so far? No.
+OK. A word of warming,
+
+106
+00:12:10,400 --> 00:12:17,170
+in particular, about what I said up here.
+It is kind of unfortunate, but the textbook
+
+107
+00:12:17,170 --> 00:12:21,279
+actually has a
+serious mistake on that. I mean they do have
+
+108
+00:12:21,279 --> 00:12:23,770
+a couple of
+formulas where they mix a d with a delta,
+
+109
+00:12:23,770 --> 00:12:32,110
+and I warn you not to
+do that, please. I mean there are d's and
+
+110
+00:12:32,110 --> 00:12:33,670
+there
+are delta's, and basically they don't live
+
+111
+00:12:33,670 --> 00:12:44,730
+in the same world.
+They don't see each other. The textbook is
+
+112
+00:12:44,730 --> 00:12:59,640
+lying to you.
+Let's see. The first and the second
+
+113
+00:12:59,640 --> 00:13:04,410
+claims, I don't really need to justify
+because the first one is just stating some
+
+114
+00:13:04,410 --> 00:13:07,260
+general principle,
+but I am not making a precise mathematical
+
+115
+00:13:07,260 --> 00:13:12,160
+claim.
+The second one, well, we know the approximation
+
+116
+00:13:12,160 --> 00:13:13,550
+formula already, so I don't need to justify
+it
+
+117
+00:13:13,550 --> 00:13:18,760
+for you. But, on the other hand,
+this formula here, I mean, you probably have
+
+118
+00:13:18,760 --> 00:13:23,930
+a
+right to expect some reason for why this works.
+
+119
+00:13:23,930 --> 00:13:27,330
+Why is this valid? After all, I first told
+you we
+
+120
+00:13:27,330 --> 00:13:31,050
+have these new mysterious objects.
+And then I am telling you we can do that,
+
+121
+00:13:31,050 --> 00:13:39,510
+but I kind of
+pulled it out of my hat. I mean I don't have
+
+122
+00:13:39,510 --> 00:13:53,279
+a hat.
+Why is this valid? How can I get to this?
+
+123
+00:13:53,279 --> 00:14:05,920
+Here is a first attempt of justifying how
+to get there.
+
+124
+00:14:05,920 --> 00:14:19,320
+Let's see. Well, we said df is f sub x dx
+plus f sub y dy plus f sub z dz. But we know
+
+125
+00:14:19,320 --> 00:14:33,880
+if x is a function
+of t then dx is x prime of t dt, dy is y prime
+
+126
+00:14:33,880 --> 00:14:44,440
+of t dt,
+dz is z prime of t dt. If we plug these into
+
+127
+00:14:44,440 --> 00:14:54,210
+that
+formula, we will get that df is f sub x times
+
+128
+00:14:54,210 --> 00:15:05,050
+x prime t dt plus
+f sub y y prime of t dt plus f sub z z prime
+
+129
+00:15:05,050 --> 00:15:13,920
+of t dt.
+And now I have a relation between df and dt.
+
+130
+00:15:13,920 --> 00:15:19,200
+See, I got df equals sometimes times dt.
+That means the rate of change of f with respect
+
+131
+00:15:19,200 --> 00:15:35,589
+to t should be
+that coefficient. If I divide by dt then I
+
+132
+00:15:35,589 --> 00:15:46,810
+get
+the chain rule. That kind of works,
+
+133
+00:15:46,810 --> 00:15:50,550
+but that shouldn't be completely satisfactory.
+Let's say that you are a true skeptic and
+
+134
+00:15:50,550 --> 00:15:56,250
+you don't believe in
+differentials yet then it is maybe not very
+
+135
+00:15:56,250 --> 00:16:01,160
+good that I
+actually used more of these differential notations
+
+136
+00:16:01,160 --> 00:16:04,560
+in
+deriving the answer. That is actually not
+
+137
+00:16:04,560 --> 00:16:07,830
+how it is
+proved. The way in which you prove the
+
+138
+00:16:07,830 --> 00:16:14,420
+chain rule is not this way because we shouldn't
+have too
+
+139
+00:16:14,420 --> 00:16:18,140
+much trust in differentials just yet.
+I mean at the end of today's lecture, yes,
+
+140
+00:16:18,140 --> 00:16:23,700
+probably we should believe in them,
+but so far we should be a little bit reluctant
+
+141
+00:16:23,700 --> 00:16:28,960
+to believe
+these kind of strange objects telling us weird
+
+142
+00:16:28,960 --> 00:16:38,970
+things.
+Here is a better way to think about it.
+
+143
+00:16:38,970 --> 00:16:41,870
+One thing that we have trust in so far are
+approximation
+
+144
+00:16:41,870 --> 00:16:53,040
+formulas. We should have trust in them.
+We should believe that if we change x a little
+
+145
+00:16:53,040 --> 00:17:02,480
+bit,
+if we change y a little bit then we are actually
+
+146
+00:17:02,480 --> 00:17:07,809
+going to
+get a change in f that is approximately given
+
+147
+00:17:07,809 --> 00:17:12,970
+by these
+guys. And this is true for any
+
+148
+00:17:12,970 --> 00:17:16,160
+changes in x, y, z,
+but in particular let's look at the changes
+
+149
+00:17:16,160 --> 00:17:21,410
+that we get if we
+just take these formulas as function of time
+
+150
+00:17:21,410 --> 00:17:29,330
+and change time
+a little bit by delta t. We will actually
+
+151
+00:17:29,330 --> 00:17:38,809
+use the
+changes in x, y, z in a small time delta t.
+
+152
+00:17:38,809 --> 00:17:49,580
+Let's divide everybody by delta t.
+Here I am just dividing numbers so I am not
+
+153
+00:17:49,580 --> 00:17:53,530
+actually playing any
+tricks on you. I mean we don't really know
+
+154
+00:17:53,530 --> 00:17:59,500
+what it means to divide differentials,
+but dividing numbers is something we know.
+
+155
+00:17:59,500 --> 00:18:10,660
+And now, if I take delta t very small, this
+guy tends to the
+
+156
+00:18:10,660 --> 00:18:18,220
+derivative, df over dt. Remember, the definition
+of df
+
+157
+00:18:18,220 --> 00:18:22,370
+over dt is the limit of this ratio when the
+time interval
+
+158
+00:18:22,370 --> 00:18:27,850
+delta t tends to zero. That means if I choose
+smaller
+
+159
+00:18:27,850 --> 00:18:33,490
+and smaller values of delta t then these ratios
+of numbers
+
+160
+00:18:33,490 --> 00:18:39,900
+will actually tend to some value,
+and that value is the derivative.
+
+161
+00:18:39,900 --> 00:18:47,110
+Similarly, here delta x over delta t, when
+delta t is really
+
+162
+00:18:47,110 --> 00:19:18,380
+small, will tend to the derivative dx/dt.
+And similarly for the others.
+
+163
+00:19:18,380 --> 00:19:28,080
+That means, in particular, we take the limit
+as delta t
+
+164
+00:19:28,080 --> 00:19:33,190
+tends to zero and we get df over dt on one
+side and on the other
+
+165
+00:19:33,190 --> 00:19:41,160
+side we get f sub x dx over dt plus f sub
+y dy over dt plus f
+
+166
+00:19:41,160 --> 00:19:48,780
+sub z dz over dt. And the approximation becomes
+better and better. Remember when we write
+
+167
+00:19:48,780 --> 00:19:53,410
+approximately equal that means it is not quite
+the same,
+
+168
+00:19:53,410 --> 00:19:58,790
+but if we take smaller variations then actually
+we will
+
+169
+00:19:58,790 --> 00:20:03,790
+end up with values that are closer and closer.
+When we take the limit, as delta t tends to
+
+170
+00:20:03,790 --> 00:20:21,059
+zero,
+eventually we get an equality.
+
+171
+00:20:21,059 --> 00:20:24,130
+I mean mathematicians have more complicated
+words to justify
+
+172
+00:20:24,130 --> 00:20:30,309
+this statement. I will spare them for now,
+and you will see them when you take analysis
+
+173
+00:20:30,309 --> 00:20:41,420
+if you go in that
+direction. Any questions so far?
+
+174
+00:20:41,420 --> 00:20:47,740
+No. OK.
+Let's check this with an example.
+
+175
+00:20:47,740 --> 00:20:53,900
+Let's say that we really don't have any faith
+in these things
+
+176
+00:20:53,900 --> 00:21:05,140
+so let's try to do it. Let's say I give you
+a function
+
+177
+00:21:05,140 --> 00:21:10,890
+that is x ^2 y z. And let's say that maybe
+x will
+
+178
+00:21:10,890 --> 00:21:36,240
+be t, y will be e^t and z will be sin(t).
+What does the chain rule say? Well, the chain
+
+179
+00:21:36,240 --> 00:21:48,000
+rule tells us
+that dw/dt is, we start with partial w over
+
+180
+00:21:48,000 --> 00:21:57,850
+partial x, well, what is that?
+That is 2xy, and maybe I should point out
+
+181
+00:21:57,850 --> 00:22:08,630
+that this is w sub x, times dx over dt plus
+-- Well,
+
+182
+00:22:08,630 --> 00:22:20,530
+w sub y is x squared times dy over dt plus
+w sub z,
+
+183
+00:22:20,530 --> 00:22:31,600
+which is going to be just one, dz over dt.
+And so now let's plug in the actual values
+
+184
+00:22:31,600 --> 00:22:37,530
+of these things.
+x is t and y is e^t, so that will be 2t e
+
+185
+00:22:37,530 --> 00:22:47,380
+to the t,
+dx over dt is one plus x squared is t squared,
+
+186
+00:22:47,380 --> 00:22:59,929
+dy over dt is e over t, plus dz over dt is
+cosine t.
+
+187
+00:22:59,929 --> 00:23:04,870
+At the end of calculation we get 2t e to the
+t plus t squared
+
+188
+00:23:04,870 --> 00:23:10,880
+e to the t plus cosine t. That is what the
+chain rule
+
+189
+00:23:10,880 --> 00:23:18,540
+tells us. How else could we find that?
+Well, we could just plug in values of x, y
+
+190
+00:23:18,540 --> 00:23:22,679
+and z,
+x plus w is a function of t, and take its
+
+191
+00:23:22,679 --> 00:23:26,390
+derivative.
+Let's do that just for verification.
+
+192
+00:23:26,390 --> 00:23:31,910
+It should be exactly the same answer.
+And, in fact, in this case,
+
+193
+00:23:31,910 --> 00:23:35,720
+the two calculations are roughly equal in
+complication.
+
+194
+00:23:35,720 --> 00:23:40,290
+But say that your function of x, y, z was
+much more
+
+195
+00:23:40,290 --> 00:23:42,580
+complicated than that, or maybe you actually
+didn't
+
+196
+00:23:42,580 --> 00:23:47,340
+know a formula for it, you only knew its partial
+derivatives, then you would need to use the
+
+197
+00:23:47,340 --> 00:24:12,980
+chain rule. So, sometimes plugging in
+values is easier but not always.
+
+198
+00:24:12,980 --> 00:24:16,200
+Let's just check quickly. The other method
+would be to
+
+199
+00:24:16,200 --> 00:24:34,540
+substitute. W as a function of t.
+Remember w was x^2y z. x was t, so you get
+
+200
+00:24:34,540 --> 00:24:39,559
+t squared,
+y is e to the t, plus z was sine t.
+
+201
+00:24:39,559 --> 00:24:47,559
+dw over dt, we know how to take the derivative
+using single
+
+202
+00:24:47,559 --> 00:24:52,059
+variable calculus. Well, we should know.
+If we don't know then we should take a look
+
+203
+00:24:52,059 --> 00:24:58,410
+at 18.01 again.
+The product rule that will be derivative of
+
+204
+00:24:58,410 --> 00:25:04,240
+t squared is 2t
+times e to the t plus t squared time the derivative
+
+205
+00:25:04,240 --> 00:25:12,919
+of e to the
+t is e to the t plus cosine t. And that is
+
+206
+00:25:12,919 --> 00:25:19,260
+the same answer as
+over there. I ended up writing,
+
+207
+00:25:19,260 --> 00:25:24,350
+you know, maybe I wrote slightly more here,
+but actually the amount of calculations really
+
+208
+00:25:24,350 --> 00:25:33,440
+was pretty
+much the same. Any questions about that?
+
+209
+00:25:33,440 --> 00:25:43,679
+Yes? What kind of object is w?
+Well, you can think of w as just another variable
+
+210
+00:25:43,679 --> 00:25:47,230
+that is
+given as a function of x, y and z, for example.
+
+211
+00:25:47,230 --> 00:25:51,720
+You would have a function of x, y, z defined
+by this formula,
+
+212
+00:25:51,720 --> 00:25:55,559
+and I call it w. I call its value w so that
+I
+
+213
+00:25:55,559 --> 00:26:05,710
+can substitute t instead of x, y, z.
+Well, let's think of w as a function of three
+
+214
+00:26:05,710 --> 00:26:09,690
+variables.
+And then, when I plug in the dependents of
+
+215
+00:26:09,690 --> 00:26:12,600
+these three
+variables on t, then it becomes just a function
+
+216
+00:26:12,600 --> 00:26:23,450
+of t. I mean, really,
+my w here is pretty much what I called f before.
+
+217
+00:26:23,450 --> 00:26:37,630
+There is no major difference between the two.
+Any other questions? No.
+
+218
+00:26:37,630 --> 00:26:49,140
+OK. Let's see.
+Here is an application of what we have seen.
+
+219
+00:26:49,140 --> 00:26:51,820
+Let's say that you want to understand actually
+all these
+
+220
+00:26:51,820 --> 00:26:57,010
+rules about taking derivatives in single variable
+calculus.
+
+221
+00:26:57,010 --> 00:26:59,400
+What I showed you at the beginning, and then
+erased,
+
+222
+00:26:59,400 --> 00:27:04,210
+basically justifies how to take the derivative
+of a reciprocal
+
+223
+00:27:04,210 --> 00:27:08,880
+function. And for that you didn't need
+multivariable calculus. But let's try to justify
+
+224
+00:27:08,880 --> 00:27:10,270
+the
+product rule, for example,
+
+225
+00:27:10,270 --> 00:27:16,760
+for the derivative. An application of this
+actually
+
+226
+00:27:16,760 --> 00:27:32,630
+is to justify the product and quotient rules.
+Let's think, for example,
+
+227
+00:27:32,630 --> 00:27:37,620
+of a function of two variables, u and v, that
+is just the
+
+228
+00:27:37,620 --> 00:27:47,650
+product uv. And let's say that u and v are
+actually functions of one variable t.
+
+229
+00:27:47,650 --> 00:28:00,610
+Then, well, d of uv over dt is given by the
+chain rule applied
+
+230
+00:28:00,610 --> 00:28:10,179
+to f. This is df over dt.
+So df over dt should be f sub q du over dt
+
+231
+00:28:10,179 --> 00:28:18,990
+plus f sub v plus dv
+over dt. But now what is the partial of
+
+232
+00:28:18,990 --> 00:28:27,320
+f with respect to u? It is v.
+That is v du over dt. And partial of f with
+
+233
+00:28:27,320 --> 00:28:38,309
+respect
+to v is going to be just u, dv over dt.
+
+234
+00:28:38,309 --> 00:28:44,990
+So you get back the usual product rule.
+That is a slightly complicated way of deriving
+
+235
+00:28:44,990 --> 00:28:50,250
+it,
+but that is a valid way of understanding how
+
+236
+00:28:50,250 --> 00:28:53,679
+to take the
+derivative of a product by thinking of the
+
+237
+00:28:53,679 --> 00:28:57,500
+product first as
+a function of variables, which are u and v.
+
+238
+00:28:57,500 --> 00:29:01,910
+And then say, oh, but u and v were actually
+functions of a variable t. And then you do
+
+239
+00:29:01,910 --> 00:29:04,289
+the
+differentiation in two stages using the chain
+
+240
+00:29:04,289 --> 00:29:13,840
+rule.
+Similarly, you can do the quotient rule just
+
+241
+00:29:13,840 --> 00:29:20,429
+for practice.
+If I give you the function g equals u of v.
+
+242
+00:29:20,429 --> 00:29:24,140
+Right now I am thinking of it as a function
+of two variables,
+
+243
+00:29:24,140 --> 00:29:38,480
+u and v. U and v themselves are actually
+going to be functions of t. Then, well, dg
+
+244
+00:29:38,480 --> 00:29:44,010
+over dt is going
+to be partial g, partial u.
+
+245
+00:29:44,010 --> 00:29:52,919
+How much is that? How much is partial g,
+partial u? One over v times du over dt
+
+246
+00:29:52,919 --> 00:29:58,160
+plus -- Well, next we need to have partial
+g
+
+247
+00:29:58,160 --> 00:30:00,940
+over partial v. Well, what is the derivative
+of
+
+248
+00:30:00,940 --> 00:30:03,870
+this with respect to v? Here we need to know
+how to
+
+249
+00:30:03,870 --> 00:30:09,090
+differentiate the inverse. It is minus u over
+v squared
+
+250
+00:30:09,090 --> 00:30:17,049
+times dv over dt. And that is actually the
+usual
+
+251
+00:30:17,049 --> 00:30:27,890
+quotient rule just written in a slightly different
+way.
+
+252
+00:30:27,890 --> 00:30:30,510
+I mean, just in case you really want to see
+it,
+
+253
+00:30:30,510 --> 00:30:35,419
+if you clear denominators for v squared then
+you will see
+
+254
+00:30:35,419 --> 00:31:25,890
+basically u prime times v minus v prime times
+u.
+
+255
+00:31:25,890 --> 00:31:45,360
+Now let's go to something even more crazy.
+I claim we can do chain rules with more variables.
+
+256
+00:31:45,360 --> 00:31:53,500
+Let's say that I have a quantity.
+Let's call it w for now. Let's say I have
+
+257
+00:31:53,500 --> 00:31:57,990
+quantity w as
+a function of say variables x and y.
+
+258
+00:31:57,990 --> 00:32:01,289
+And so in the previous setup x and y depended
+on some
+
+259
+00:32:01,289 --> 00:32:06,710
+parameters t. But, actually,
+let's now look at the case where x and y themselves
+
+260
+00:32:06,710 --> 00:32:08,840
+are
+functions of several variables. Let's say
+
+261
+00:32:08,840 --> 00:32:24,240
+of two more variables.
+Let's call them u and v. 
+
+262
+00:32:24,240 --> 00:32:27,270
+I am going to stay with these
+abstract letters, but if it bothers you,
+
+263
+00:32:27,270 --> 00:32:31,100
+if it sounds completely unmotivated think
+about it maybe
+
+264
+00:32:31,100 --> 00:32:35,520
+in terms of something you might now.
+Say, polar coordinates. Let's say that I have
+
+265
+00:32:35,520 --> 00:32:39,700
+a
+function but is defined in terms of the polar
+
+266
+00:32:39,700 --> 00:32:42,909
+coordinate
+variables on theta. And then I know I want
+
+267
+00:32:42,909 --> 00:32:45,280
+to
+switch to usual coordinates x and y.
+
+268
+00:32:45,280 --> 00:32:48,720
+Or, the other way around, I have a function
+of x and y
+
+269
+00:32:48,720 --> 00:32:52,100
+and I want to express it in terms of the polar
+coordinates r
+
+270
+00:32:52,100 --> 00:32:59,760
+and theta. Then I would want to know maybe
+how the derivatives, with respect to the various
+
+271
+00:32:59,760 --> 00:33:09,970
+sets of variables, related to each other.
+One way I could do it is, of course,
+
+272
+00:33:09,970 --> 00:33:16,380
+to say now if I plug the formula for x and
+the formula
+
+273
+00:33:16,380 --> 00:33:23,830
+for y into the formula for f then w becomes
+a function of u
+
+274
+00:33:23,830 --> 00:33:29,070
+and v, and it can try to take partial
+derivatives. If I have explicit formulas,
+
+275
+00:33:29,070 --> 00:33:31,549
+well, that could work. But maybe the formulas
+are
+
+276
+00:33:31,549 --> 00:33:36,640
+complicated. Typically, if I switch between
+rectangular and polar coordinates,
+
+277
+00:33:36,640 --> 00:33:42,000
+there might be inverse trig, there might be
+maybe arctangent
+
+278
+00:33:42,000 --> 00:33:44,640
+to express the polar angle in terms of x and
+y.
+
+279
+00:33:44,640 --> 00:33:48,360
+And when I don't really want to actually substitute
+arctangents
+
+280
+00:33:48,360 --> 00:33:56,150
+everywhere, maybe I would rather deal with
+the derivatives.
+
+281
+00:33:56,150 --> 00:34:11,219
+How do I do that? The question is what are
+partial w over partial u and partial w over
+
+282
+00:34:11,219 --> 00:34:18,589
+partial v in
+terms of, let's see, what do we need to know
+
+283
+00:34:18,589 --> 00:34:21,429
+to
+understand that? Well, probably we should
+
+284
+00:34:21,429 --> 00:34:25,499
+know
+how w depends on x and y. If we don't know
+
+285
+00:34:25,499 --> 00:34:30,349
+that then we
+are probably toast. Partial w over partial
+
+286
+00:34:30,349 --> 00:34:36,129
+x,
+partial w over partial y should be required.
+
+287
+00:34:36,129 --> 00:34:38,269
+What else should we know? Well, it would probably
+help to
+
+288
+00:34:38,269 --> 00:34:43,259
+know how x and y depend on u and v.
+If we don't know that then we don't really
+
+289
+00:34:43,259 --> 00:34:56,429
+know how to do it.
+We need also x sub u, x sub v, y sub u,
+
+290
+00:34:56,429 --> 00:35:04,359
+y sub v. We have a lot of partials in
+there. Well, let's see how we can do
+
+291
+00:35:04,359 --> 00:35:18,499
+that. Let's start by writing dw.
+We know that dw is partial f, well, I don't
+
+292
+00:35:18,499 --> 00:35:22,739
+know why I have
+two names, w and f. I mean w and f are really
+
+293
+00:35:22,739 --> 00:35:27,450
+the
+same thing here, but let's say f sub x dx
+
+294
+00:35:27,450 --> 00:35:34,390
+plus f
+sub y dy. So far that is our new friend,
+
+295
+00:35:34,390 --> 00:35:38,989
+the differential. Now what do we want to do
+with
+
+296
+00:35:38,989 --> 00:35:45,729
+it? Well, we would like to get rid
+of dx and dy because we like to express things
+
+297
+00:35:45,729 --> 00:35:49,440
+in terms of,
+you know, the question we are asking ourselves
+
+298
+00:35:49,440 --> 00:35:54,960
+is let's say
+that I change u a little bit, how does w change?
+
+299
+00:35:54,960 --> 00:35:57,809
+Of course, what happens, if I change u a little
+bit,
+
+300
+00:35:57,809 --> 00:36:06,210
+is y and y will change. How do they change?
+Well, that is given to me by the differential.
+
+301
+00:36:06,210 --> 00:36:18,569
+dx is going to be, well, I can use the
+differential again. Well, x is a function
+
+302
+00:36:18,569 --> 00:36:23,229
+of u and
+v. That will be x sub u times du
+
+303
+00:36:23,229 --> 00:36:30,549
+plus x sub v times dv. That is, again,
+taking the differential of a function of two
+
+304
+00:36:30,549 --> 00:36:35,089
+variables.
+Does that make sense? And then we have the
+
+305
+00:36:35,089 --> 00:36:39,029
+other guy,
+f sub y times, what is dy?
+
+306
+00:36:39,029 --> 00:36:49,719
+Well, similarly dy is y sub u du plus y sub
+v dv.
+
+307
+00:36:49,719 --> 00:36:54,589
+And now we have a relation between dw and
+du and dv.
+
+308
+00:36:54,589 --> 00:37:00,239
+We are expressing how w reacts to changes
+in u and v,
+
+309
+00:37:00,239 --> 00:37:05,940
+which was our goal. Now, let's actually collect
+terms so that we see it a bit better.
+
+310
+00:37:05,940 --> 00:37:15,440
+It is going to be f sub x times x sub u times
+f sub y times y
+
+311
+00:37:15,440 --> 00:37:24,819
+sub u du plus f sub x, x sub v plus f sub
+y y sub v
+
+312
+00:37:24,819 --> 00:37:38,109
+dv. Now we have dw equals something
+du plus something dv. Well, the coefficient
+
+313
+00:37:38,109 --> 00:37:42,170
+here has
+to be partial f over partial u. What else
+
+314
+00:37:42,170 --> 00:37:47,809
+could it be?
+That's the rate of change of w with respect
+
+315
+00:37:47,809 --> 00:37:52,229
+to u if I forget
+what happens when I change v. That is the
+
+316
+00:37:52,229 --> 00:37:58,239
+definition of a
+partial. Similarly, this one has to be
+
+317
+00:37:58,239 --> 00:38:04,109
+partial f over partial v. That is because
+it is the rate
+
+318
+00:38:04,109 --> 00:38:13,440
+of change with respect to v, if I keep u constant,
+so that these guys are completely ignored.
+
+319
+00:38:13,440 --> 00:38:16,359
+Now you see how the total differential accounts
+for,
+
+320
+00:38:16,359 --> 00:38:19,549
+somehow, all the partial derivatives that
+come as
+
+321
+00:38:19,549 --> 00:38:27,269
+coefficients of the individual variables in
+these expressions.
+
+322
+00:38:27,269 --> 00:38:30,920
+Let me maybe rewrite these formulas in a more
+visible way
+
+323
+00:38:30,920 --> 00:38:40,719
+and then re-explain them to you. Here is the
+chain rule for this
+
+324
+00:38:40,719 --> 00:38:45,069
+situation, with two intermediate variables
+and two variables that
+
+325
+00:38:45,069 --> 00:38:55,049
+you express these in terms of. In our setting,
+we get partial f over partial u equals partial
+
+326
+00:38:55,049 --> 00:39:00,930
+f over partial x
+time partial x over partial u plus partial
+
+327
+00:39:00,930 --> 00:39:07,380
+f over partial y
+times partial y over partial u. And the other
+
+328
+00:39:07,380 --> 00:39:10,989
+one,
+the same thing with v instead of u,
+
+329
+00:39:10,989 --> 00:39:19,900
+partial f over partial x times partial x over
+partial v plus
+
+330
+00:39:19,900 --> 00:39:27,930
+partial f over partial u partial y over partial
+v.
+
+331
+00:39:27,930 --> 00:39:30,259
+I have to explain various things about these
+formulas
+
+332
+00:39:30,259 --> 00:39:37,119
+because they look complicated. And, actually,
+they are not that complicated. A couple of
+
+333
+00:39:37,119 --> 00:39:41,499
+things to know.
+The first thing, how do we remember a formula
+
+334
+00:39:41,499 --> 00:39:46,969
+like that? Well, that is easy.
+We want to know how f depends on u.
+
+335
+00:39:46,969 --> 00:39:51,319
+Well, what does f depend on? It depends on
+x and y.
+
+336
+00:39:51,319 --> 00:39:55,960
+So we will put partial f over partial x and
+partial f over
+
+337
+00:39:55,960 --> 00:40:00,259
+partial y. Now, x and y, why are they here?
+Well, they are here because they actually
+
+338
+00:40:00,259 --> 00:40:03,269
+depend on u as
+well. How does x depend on u?
+
+339
+00:40:03,269 --> 00:40:06,279
+Well, the answer is partial x over partial
+u.
+
+340
+00:40:06,279 --> 00:40:08,849
+How does y depend on u? The answer is partial
+y over
+
+341
+00:40:08,849 --> 00:40:14,900
+partial u. See, the structure of this
+formula is simple. To find the partial of
+
+342
+00:40:14,900 --> 00:40:19,950
+f with
+respect to some new variable you use the partials
+
+343
+00:40:19,950 --> 00:40:23,049
+with respect to
+the variables that f was initially defined
+
+344
+00:40:23,049 --> 00:40:27,349
+in terms of x
+and y. And you multiply them by the
+
+345
+00:40:27,349 --> 00:40:30,700
+partials of x and y in terms of the new variable
+that you want
+
+346
+00:40:30,700 --> 00:40:40,069
+to look at, v here, and you sum these things
+together. That is the structure of the
+
+347
+00:40:40,069 --> 00:40:43,979
+formula. Why does it work?
+Well, let me explain it to you in a slightly
+
+348
+00:40:43,979 --> 00:40:48,739
+different
+language. This asks us how does f change
+
+349
+00:40:48,739 --> 00:40:54,109
+if I change u a little bit? Well, why would
+f change if u
+
+350
+00:40:54,109 --> 00:40:56,900
+changes a little bit? Well, it would change
+because f
+
+351
+00:40:56,900 --> 00:41:00,839
+actually depends on x and y and x and y depend
+on u.
+
+352
+00:41:00,839 --> 00:41:05,039
+If I change u, how quickly does x change?
+Well, the answer is partial x over partial
+
+353
+00:41:05,039 --> 00:41:09,029
+u.
+And now, if I change x at this rate, how does
+
+354
+00:41:09,029 --> 00:41:12,049
+that have to
+change? Well, the answer is partial f
+
+355
+00:41:12,049 --> 00:41:17,089
+over partial x times this guy. Well, at the
+same time,
+
+356
+00:41:17,089 --> 00:41:20,599
+y is also changing. How fast is y changing
+if I
+
+357
+00:41:20,599 --> 00:41:26,819
+change u? Well, at the rate of partial y
+over partial u. But now if I change this how
+
+358
+00:41:26,819 --> 00:41:33,269
+does f change? Well, the rate of change is
+partial f over partial y. The product is the
+
+359
+00:41:33,269 --> 00:41:37,269
+effect of
+how you change it, changing u, and therefore
+
+360
+00:41:37,269 --> 00:41:43,079
+changing f. Now, what happens in real life,
+if I change u a little bit? Well, both x and
+
+361
+00:41:43,079 --> 00:41:45,640
+y change at
+the same time. So how does f change?
+
+362
+00:41:45,640 --> 00:41:54,440
+Well, it is the sum of the two effects.
+Does that make sense? Good.
+
+363
+00:41:54,440 --> 00:41:57,950
+Of course, if f depends on more variables
+then you just have
+
+364
+00:41:57,950 --> 00:42:05,009
+more terms in here. OK.
+Here is another thing that may be a little
+
+365
+00:42:05,009 --> 00:42:07,719
+bit confusing.
+What is tempting? Well, what is tempting here
+
+366
+00:42:07,719 --> 00:42:11,119
+would be to simplify these formulas by removing
+these
+
+367
+00:42:11,119 --> 00:42:17,489
+partial x's. Let's simplify by partial x.
+Let's simplify by partial y. We get partial
+
+368
+00:42:17,489 --> 00:42:19,799
+f over partial u
+equals partial f over partial u plus partial
+
+369
+00:42:19,799 --> 00:42:25,369
+f over partial u.
+Something is not working properly.
+
+370
+00:42:25,369 --> 00:42:28,859
+Why doesn't it work? The answer is precisely
+because
+
+371
+00:42:28,859 --> 00:42:32,789
+these are partial derivatives. These are not
+total derivatives.
+
+372
+00:42:32,789 --> 00:42:38,089
+And so you cannot simplify them in that way.
+And that is actually the reason why we use
+
+373
+00:42:38,089 --> 00:42:41,039
+this curly d rather
+than a straight d. It is to remind us,
+
+374
+00:42:41,039 --> 00:42:43,940
+beware, there are these simplifications that
+we can do
+
+375
+00:42:43,940 --> 00:42:49,109
+with straight d's that are not legal here.
+Somehow, when you have a partial derivative,
+
+376
+00:42:49,109 --> 00:42:59,469
+you must resist the urge of simplifying things.
+No simplifications in here. That is the simplest
+
+377
+00:42:59,469 --> 00:43:10,049
+formula
+you can get. Any questions at this point?
+
+378
+00:43:10,049 --> 00:43:23,059
+No. Yes?
+When would you use this and what does it describe?
+
+379
+00:43:23,059 --> 00:43:26,019
+Well, it is basically when you have a function
+given in terms
+
+380
+00:43:26,019 --> 00:43:30,069
+of a certain set of variables because maybe
+there is a simply
+
+381
+00:43:30,069 --> 00:43:34,589
+expression in terms of those variables.
+But ultimately what you care about is not
+
+382
+00:43:34,589 --> 00:43:38,400
+those variables,
+z and y, but another set of variables, here
+
+383
+00:43:38,400 --> 00:43:43,209
+u and v.
+So x and y are giving you a nice formula for
+
+384
+00:43:43,209 --> 00:43:45,339
+f,
+but actually the relevant variables for your
+
+385
+00:43:45,339 --> 00:43:48,049
+problem are u
+and v. And you know x and y are
+
+386
+00:43:48,049 --> 00:43:52,039
+related to u and v. So, of course,
+what you could do is plug the formulas the
+
+387
+00:43:52,039 --> 00:43:55,170
+way that we did
+substituting. But maybe that will give you
+
+388
+00:43:55,170 --> 00:43:58,869
+very complicated expressions. And maybe it
+is actually easier
+
+389
+00:43:58,869 --> 00:44:02,119
+to just work with the derivates. The important
+claim here is
+
+390
+00:44:02,119 --> 00:44:05,009
+basically we don't need to know the actual
+formulas.
+
+391
+00:44:05,009 --> 00:44:09,769
+All we need to know are the rate of changes.
+If we know all these rates of change then
+
+392
+00:44:09,769 --> 00:44:12,940
+we know how to take
+these derivatives without actually having
+
+393
+00:44:12,940 --> 00:44:19,759
+to plug in
+values. Yes?
+
+394
+00:44:19,759 --> 00:44:26,150
+Yes, you could certain do the same things
+in terms of t.
+
+395
+00:44:26,150 --> 00:44:29,079
+If x and y were functions of t instead of
+being functions of u
+
+396
+00:44:29,079 --> 00:44:32,910
+and v then it would be the same thing.
+And you would have the same formulas that
+
+397
+00:44:32,910 --> 00:44:36,759
+I had,
+well, over there I still have it.
+
+398
+00:44:36,759 --> 00:44:41,390
+Why does that one have straight d's?
+Well, the answer is I could put curly d's
+
+399
+00:44:41,390 --> 00:44:45,869
+if I wanted,
+but I end up with a function of a single variable.
+
+400
+00:44:45,869 --> 00:44:49,190
+If you have a single variable then the partial,
+with respect to that variable, is the same
+
+401
+00:44:49,190 --> 00:44:52,569
+thing as the usual
+derivative. We don't actually need to worry
+
+402
+00:44:52,569 --> 00:44:56,670
+about curly in that case. But that one is
+indeed special
+
+403
+00:44:56,670 --> 00:45:00,150
+case of this one where instead of x and y
+depending on two
+
+404
+00:45:00,150 --> 00:45:04,440
+variables, u and v, they depend on a single
+variable t. Now, of course,
+
+405
+00:45:04,440 --> 00:45:12,279
+you can call variables any name you want.
+It doesn't matter. This is just a slight
+
+406
+00:45:12,279 --> 00:45:15,529
+generalization of that. Well, not quite because
+here I
+
+407
+00:45:15,529 --> 00:45:19,559
+also had a z. See, I am trying to just
+confuse you by giving you functions that depend
+
+408
+00:45:19,559 --> 00:45:23,180
+on various
+numbers of variables. If you have a function
+
+409
+00:45:23,180 --> 00:45:26,249
+of 30
+variables, things work the same way, just
+
+410
+00:45:26,249 --> 00:45:28,229
+longer,
+and you are going to run out of letters in
+
+411
+00:45:28,229 --> 00:45:38,599
+the alphabet before
+the end. Any other questions?
+
+412
+00:45:38,599 --> 00:45:51,190
+No. What?
+Yes? If u and v themselves depended
+
+413
+00:45:51,190 --> 00:45:55,269
+on another variable then you would continue
+with your chain
+
+414
+00:45:55,269 --> 00:45:59,839
+rules. Maybe you would know to express
+partial x over partial u in terms using that
+
+415
+00:45:59,839 --> 00:46:04,039
+chain rule.
+Sorry. If u and v are dependent on yet
+
+416
+00:46:04,039 --> 00:46:06,319
+another variable then you could get the derivative
+with respect
+
+417
+00:46:06,319 --> 00:46:11,269
+to that using first the chain rule to pass
+from u v to that
+
+418
+00:46:11,269 --> 00:46:15,859
+new variable, and then you would plug in
+these formulas for partials of f with respect
+
+419
+00:46:15,859 --> 00:46:18,729
+to u and v.
+In fact, if you have several substitutions
+
+420
+00:46:18,729 --> 00:46:20,950
+to do,
+you can always arrange to use one chain rule
+
+421
+00:46:20,950 --> 00:46:25,009
+at a time.
+You just have to do them in sequence.
+
+422
+00:46:25,009 --> 00:46:27,729
+That's why we don't actually learn that, but
+you can just do
+
+423
+00:46:27,729 --> 00:46:31,269
+it be repeating the process. I mean, probably
+at that stage,
+
+424
+00:46:31,269 --> 00:46:33,509
+the easiest to not get confused actually is
+to manipulate
+
+425
+00:46:33,509 --> 00:46:47,079
+differentials because that is probably easier.
+Yes? Curly f does not exist.
+
+426
+00:46:47,079 --> 00:46:52,259
+That's easy. Curly f makes no sense by
+itself. It doesn't exist alone.
+
+427
+00:46:52,259 --> 00:46:57,880
+What exists is only curly df over curly d
+some variable.
+
+428
+00:46:57,880 --> 00:47:01,930
+And then that accounts only for the rate of
+change with respect
+
+429
+00:47:01,930 --> 00:47:08,130
+to that variable leaving the others fixed,
+while straight df is somehow a total variation
+
+430
+00:47:08,130 --> 00:47:13,229
+of f.
+It accounts for all of the partial derivatives
+
+431
+00:47:13,229 --> 00:47:23,539
+and their
+combined effects. OK. Any more questions?
+
+432
+00:47:23,539 --> 00:47:27,709
+No.
+Let me just finish up very quickly by telling
+
+433
+00:47:27,709 --> 00:47:32,410
+you again one
+example where completely you might want to
+
+434
+00:47:32,410 --> 00:47:35,329
+do this.
+You have a function that you want to switch
+
+435
+00:47:35,329 --> 00:47:45,479
+between
+rectangular and polar coordinates.
+
+436
+00:47:45,479 --> 00:47:54,619
+To make things a little bit concrete.
+If you have polar coordinates that means in
+
+437
+00:47:54,619 --> 00:47:59,900
+the plane,
+instead of using x and y, you will use coordinates
+
+438
+00:47:59,900 --> 00:48:03,109
+r,
+distance to the origin, and theta, the angles
+
+439
+00:48:03,109 --> 00:48:06,859
+from the
+x-axis. The change of variables for
+
+440
+00:48:06,859 --> 00:48:14,279
+that is x equals r cosine theta and y equals
+r sine theta.
+
+441
+00:48:14,279 --> 00:48:24,299
+And so that means if you have a function f
+that depends on x and
+
+442
+00:48:24,299 --> 00:48:28,940
+y, in fact, you can plug these in as a function
+of r and theta.
+
+443
+00:48:28,940 --> 00:48:32,949
+Then you can ask yourself, well, what is partial
+f over
+
+444
+00:48:32,949 --> 00:48:40,809
+partial r? And that is going to be,
+well, you want to take partial f over partial
+
+445
+00:48:40,809 --> 00:48:47,199
+x times partial x
+partial r plus partial f over partial y times
+
+446
+00:48:47,199 --> 00:48:51,420
+partial y over
+partial r. That will end up being actually
+
+447
+00:48:51,420 --> 00:48:59,739
+f sub x times cosine theta plus f sub y times
+sine theta.
+
+448
+00:48:59,739 --> 00:49:01,920
+And you can do the same thing to find partial
+f,
+
+449
+00:49:01,920 --> 00:49:06,209
+partial theta. And so you can express
+derivatives either in terms of x, y or in
+
+450
+00:49:06,209 --> 00:49:13,109
+terms of r and theta
+with simple relations between them.
+
+451
+00:49:13,109 --> 00:49:22,799
+And the one last thing I should say.
+On Thursday we will learn about more tricks
+
+452
+00:49:22,799 --> 00:49:26,380
+we can play with
+variations of functions. And one that is important,
+
+453
+00:49:26,380 --> 00:49:29,170
+because you need to know it actually to do
+the p-set,
+
+454
+00:49:29,170 --> 00:49:38,749
+is the gradient vector. The gradient vector
+is simply a
+
+455
+00:49:38,749 --> 00:49:43,930
+vector. You use this downward pointing
+triangle as the notation for the gradient.
+
+456
+00:49:43,930 --> 00:49:47,279
+It is simply is a vector whose components
+are the partial
+
+457
+00:49:47,279 --> 00:49:53,880
+derivatives of a function. I mean, in a way,
+you can think of a differential as a way to
+
+458
+00:49:53,880 --> 00:49:58,390
+package partial
+derivatives together into some weird object.
+
+459
+00:49:58,390 --> 00:50:01,199
+Well, the gradient is also a way to package
+partials
+
+460
+00:50:01,199 --> 00:50:06,109
+together. We will see on Thursday what it
+is good for, but some of the problems on the
+
+461
+00:50:06,109 --> 00:50:07,199
+p-set use it.
+

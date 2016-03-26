@@ -1,0 +1,2290 @@
+1
+00:00:00,140 --> 00:00:02,400
+The following content is provided under a
+Creative
+
+2
+00:00:02,400 --> 00:00:07,640
+Commons license. Your support will help MIT
+OpenCourseWare continue to offer high quality
+
+3
+00:00:07,640 --> 00:00:11,290
+educational
+resources for free. To make a donation or
+
+4
+00:00:11,290 --> 00:00:13,860
+to view
+additional materials from hundreds of MIT
+
+5
+00:00:13,860 --> 00:00:22,310
+courses,
+visit MIT OpenCourseWare at ocw.mit.edu.
+
+6
+00:00:22,310 --> 00:00:27,519
+So, basically the last few weeks, we've been
+doing
+
+7
+00:00:27,519 --> 00:00:42,120
+derivatives. Now, we're going to integrals.
+So -- OK, so more precisely, we are going
+
+8
+00:00:42,120 --> 00:01:00,249
+to be talking
+about double integrals. OK, so just to motivate
+
+9
+00:01:00,249 --> 00:01:02,269
+the
+notion, let me just remind you that
+
+10
+00:01:02,269 --> 00:01:14,710
+when you have a function of one variable -- -- say,
+f of x, and you take its integrals
+
+11
+00:01:14,710 --> 00:01:29,430
+from, say, a to b of f of x dx,
+well, that corresponds to the area below the
+
+12
+00:01:29,430 --> 00:01:40,659
+graph of f over
+the interval from a to b. OK, so the picture
+
+13
+00:01:40,659 --> 00:01:47,689
+is something
+like you have a; you have b.
+
+14
+00:01:47,689 --> 00:01:54,490
+You have the graph of f, and then what the
+integral
+
+15
+00:01:54,490 --> 00:02:04,180
+measures is the area of this region.
+And, when we say the area of this region,
+
+16
+00:02:04,180 --> 00:02:06,500
+of course,
+if f is positive, that's what happens.
+
+17
+00:02:06,500 --> 00:02:09,619
+If f is negative, then we count negatively
+the
+
+18
+00:02:09,619 --> 00:02:19,400
+area below the x axis. OK, so, now,
+when you have a function of two variables,
+
+19
+00:02:19,400 --> 00:02:22,120
+then you can try to
+do the same thing. Namely, you can plot its
+
+20
+00:02:22,120 --> 00:02:24,959
+graph.
+Its graph will be a surface in space.
+
+21
+00:02:24,959 --> 00:02:28,459
+And then, we can try to look for the volume
+below the graph.
+
+22
+00:02:28,459 --> 00:02:30,620
+And that's what we will call the double integral
+of the
+
+23
+00:02:30,620 --> 00:02:42,030
+function over a certain region. OK, so let's
+say that we have a
+
+24
+00:02:42,030 --> 00:02:55,530
+function of two variables, x and y.
+Then, we'll look at the volume that's below
+
+25
+00:02:55,530 --> 00:03:07,640
+the graph z equals
+f of xy. OK, so, let's draw a picture
+
+26
+00:03:07,640 --> 00:03:10,620
+for what this means. I have a function of
+x and y.
+
+27
+00:03:10,620 --> 00:03:14,580
+I can draw its graph. The graph will be the
+surface
+
+28
+00:03:14,580 --> 00:03:24,299
+with equation z equals f of x and y.
+And, well, I have to decide where I will integrate
+
+29
+00:03:24,299 --> 00:03:25,409
+the
+function. So, for that,
+
+30
+00:03:25,409 --> 00:03:33,000
+I will choose some region in the xy plane.
+And, I will integrate the function on that
+
+31
+00:03:33,000 --> 00:03:44,680
+region.
+So, it's over a region, R, in the xy plane.
+
+32
+00:03:44,680 --> 00:03:50,370
+So, I have this region R and I look at the
+piece of the graph
+
+33
+00:03:50,370 --> 00:03:56,180
+that is above this region. And, we'll try
+to compute the
+
+34
+00:03:56,180 --> 00:04:00,500
+volume of this solid here. OK, that's what
+the double
+
+35
+00:04:00,500 --> 00:04:09,329
+integral will measure. So, we'll call that
+the double
+
+36
+00:04:09,329 --> 00:04:15,459
+integral of our region, R, of f of xy dA and
+I will
+
+37
+00:04:15,459 --> 00:04:21,640
+have to explain what the notation means.
+So, dA here stands for a piece of area.
+
+38
+00:04:21,640 --> 00:04:28,020
+A stands for area. And, well, it's a double
+integral. So, that's why we have two
+
+39
+00:04:28,020 --> 00:04:32,870
+integral signs. And, we'll have to indicate
+somehow the region over which we are integrating.
+
+40
+00:04:32,870 --> 00:04:37,200
+OK, we'll come up with more concrete notations
+when we see
+
+41
+00:04:37,200 --> 00:04:44,410
+how to actually compute these things.
+That's the basic definition. OK, so actually,
+
+42
+00:04:44,410 --> 00:04:45,780
+how do we define it, that's not really much
+of a
+
+43
+00:04:45,780 --> 00:04:48,130
+definition yet. How do we actually define
+this
+
+44
+00:04:48,130 --> 00:04:55,720
+rigorously? Well, remember,
+the integral in one variable, you probably
+
+45
+00:04:55,720 --> 00:04:58,850
+saw a definition
+where you take your integral from a to b,
+
+46
+00:04:58,850 --> 00:05:02,530
+and you cut it into little pieces.
+And then, for each little piece, you take
+
+47
+00:05:02,530 --> 00:05:05,630
+the value of a
+function, and you multiply by the width of
+
+48
+00:05:05,630 --> 00:05:10,870
+a piece.
+That gives you a rectangular slice, and then
+
+49
+00:05:10,870 --> 00:05:13,870
+you sum all of
+these rectangular slices together.
+
+50
+00:05:13,870 --> 00:05:20,780
+So, here we'll do the same thing.
+So, well, let me put a picture up and explain
+
+51
+00:05:20,780 --> 00:05:26,750
+what it does.
+So, we're going to cut our origin into little
+
+52
+00:05:26,750 --> 00:05:29,070
+pieces,
+say, little rectangles or actually anything
+
+53
+00:05:29,070 --> 00:05:34,320
+we want.
+And then, for each piece, with the small area,
+
+54
+00:05:34,320 --> 00:05:39,630
+delta A,
+we'll take the area delta a times the value
+
+55
+00:05:39,630 --> 00:05:43,490
+of a function in
+there that will give us the volume of a small
+
+56
+00:05:43,490 --> 00:05:46,060
+box that sits
+under the graph. And then, we'll add all these
+
+57
+00:05:46,060 --> 00:05:49,720
+boxes together. That gives us an estimate
+of a
+
+58
+00:05:49,720 --> 00:05:53,080
+volume. And then, to get actually the
+integral, the integral will be defined as
+
+59
+00:05:53,080 --> 00:05:56,610
+a limit as we subdivide into smaller and smaller
+boxes,
+
+60
+00:05:56,610 --> 00:06:02,070
+and we sum more and more pieces,
+OK? So, actually,
+
+61
+00:06:02,070 --> 00:06:20,250
+what we do, oh, I still have a board here.
+So, the actual definition involves cutting
+
+62
+00:06:20,250 --> 00:06:31,390
+R into small
+pieces 
+of area that's called delta A or maybe delta
+
+63
+00:06:31,390 --> 00:06:36,960
+Ai,
+the area of the i'th piece. And then, OK,
+
+64
+00:06:36,960 --> 00:06:45,890
+so maybe in the xy plane, we have our region,
+and we'll cut it may be using some grade.
+
+65
+00:06:45,890 --> 00:06:57,200
+OK, and then we'll have each small piece.
+Each small piece will have area delta Ai and
+
+66
+00:06:57,200 --> 00:07:05,360
+it will be at some
+point, let's call it xi, yi ...
+
+67
+00:07:05,360 --> 00:07:17,510
+yi, xi. And then, we'll consider the
+sum over all the pieces of f at that point,
+
+68
+00:07:17,510 --> 00:07:21,820
+xi,
+yi times the area of a small piece.
+
+69
+00:07:21,820 --> 00:07:26,540
+So, what that corresponds to in the three-dimensional
+picture is
+
+70
+00:07:26,540 --> 00:07:30,780
+just I sum the volumes of all of these little
+columns that sit
+
+71
+00:07:30,780 --> 00:07:50,190
+under the graph. OK, and then,
+so what I do is actually I take the limit
+
+72
+00:07:50,190 --> 00:07:55,020
+as the size of the
+pieces tends to zero. So, I have more and
+
+73
+00:07:55,020 --> 00:08:00,520
+more
+smaller and smaller pieces. And, that gives
+
+74
+00:08:00,520 --> 00:08:09,220
+me the double
+integral. OK, so that's not a very good
+
+75
+00:08:09,220 --> 00:08:13,980
+sentence, but whatever. So, OK, so that's
+the
+
+76
+00:08:13,980 --> 00:08:18,300
+definition. Of course, we will have to see
+how to compute it. We don't actually compute
+
+77
+00:08:18,300 --> 00:08:20,440
+it.
+When you compute an integral in single variable
+
+78
+00:08:20,440 --> 00:08:22,910
+calculus,
+you don't do that. You don't cut into little
+
+79
+00:08:22,910 --> 00:08:27,020
+pieces and sum the pieces together.
+You've learned how to integrate functions
+
+80
+00:08:27,020 --> 00:08:29,730
+using various
+formulas, and similarly here,
+
+81
+00:08:29,730 --> 00:08:32,520
+we'll learn how to actually compute these
+things without
+
+82
+00:08:32,520 --> 00:08:37,010
+doing that cutting into small pieces.
+OK, any questions first about the concept,
+
+83
+00:08:37,010 --> 00:08:45,130
+or what the
+definition is? Yes?
+
+84
+00:08:45,130 --> 00:08:50,100
+Well, so we'll have to learn which tricks
+work,
+
+85
+00:08:50,100 --> 00:08:55,040
+and how exactly. But, so what we'll do actually
+is we'll reduce the calculation of a double
+
+86
+00:08:55,040 --> 00:08:58,750
+integral to two
+calculations of single integrals.
+
+87
+00:08:58,750 --> 00:09:01,850
+And so, for V, certainly, all the tricks
+you've learned in single variable calculus
+
+88
+00:09:01,850 --> 00:09:04,610
+will come in
+handy. OK, so,
+
+89
+00:09:04,610 --> 00:09:07,470
+yeah that's a strong suggestion that if you've
+forgotten
+
+90
+00:09:07,470 --> 00:09:10,990
+everything about single variable calculus,
+now would be a good time to actually brush
+
+91
+00:09:10,990 --> 00:09:18,880
+up on integrals.
+The usual integrals, and the usual substitution
+
+92
+00:09:18,880 --> 00:09:24,200
+tricks and easy trig in particular, these
+would be very
+
+93
+00:09:24,200 --> 00:09:30,400
+useful. OK, so, yeah,
+how do we compute these things? That's what
+
+94
+00:09:30,400 --> 00:09:37,770
+we would have to
+come up with. And, well,
+
+95
+00:09:37,770 --> 00:09:41,330
+going back to what we did with derivatives,
+to understand variations of functions and
+
+96
+00:09:41,330 --> 00:09:44,150
+derivatives,
+what we did was really we took slices parallel
+
+97
+00:09:44,150 --> 00:09:47,150
+to an axis or
+another one. So, in fact,
+
+98
+00:09:47,150 --> 00:09:50,530
+here, the key is also the same. So, what we
+are going to do is
+
+99
+00:09:50,530 --> 00:09:52,940
+instead of cutting into a lot of small boxes
+like that and
+
+100
+00:09:52,940 --> 00:09:57,690
+summing completely at random, we will actually
+somehow scan
+
+101
+00:09:57,690 --> 00:10:02,470
+through our region by parallel planes,
+OK? So, let me put up,
+
+102
+00:10:02,470 --> 00:10:06,870
+actually, a slightly different picture up
+here.
+
+103
+00:10:06,870 --> 00:10:11,450
+So, what I'm going to do is I'm going to take
+planes,
+
+104
+00:10:11,450 --> 00:10:17,200
+say in this picture, parallel to the yz plane.
+I'll take a moving plane that scans from the
+
+105
+00:10:17,200 --> 00:10:22,030
+back to the front
+or from the front to the back. So, that means
+
+106
+00:10:22,030 --> 00:10:28,440
+I set the value
+of x, and I look at the slice, x equals x0,
+
+107
+00:10:28,440 --> 00:10:31,330
+and then I will do that for all values of
+x0.
+
+108
+00:10:31,330 --> 00:10:35,510
+So, now in each slice, well, I get what looks
+a lot
+
+109
+00:10:35,510 --> 00:10:40,030
+like a single variable integral. OK, and that
+integral will tell
+
+110
+00:10:40,030 --> 00:10:43,560
+me, what is the area in this? Well, I guess
+it's supposed to
+
+111
+00:10:43,560 --> 00:10:47,190
+be green, but it all comes as black, so, let's
+say the black
+
+112
+00:10:47,190 --> 00:10:54,250
+shaded slice. And then, when I add all of
+these areas together, as the value of x changes,
+
+113
+00:10:54,250 --> 00:10:58,750
+I will get the volume. OK, let me try to explain
+that
+
+114
+00:10:58,750 --> 00:11:14,010
+again. So, to compute this integral,
+what we do is actually we take slices.
+
+115
+00:11:14,010 --> 00:11:27,220
+So, let's consider, let's call s of x the
+area of a
+
+116
+00:11:27,220 --> 00:11:39,860
+slice, well, by a plane parallel to the yz
+plane.
+
+117
+00:11:39,860 --> 00:11:45,270
+OK, so on the picture, s of x is just the
+area of this
+
+118
+00:11:45,270 --> 00:11:51,480
+thing in the vertical wall. Now, if you sum
+all of these,
+
+119
+00:11:51,480 --> 00:11:56,040
+well, why does that work? So, if you take
+the origin
+
+120
+00:11:56,040 --> 00:11:59,570
+between two parallel slices that are very
+close to each other,
+
+121
+00:11:59,570 --> 00:12:05,560
+what's the volume in these two things?
+Well, it's essentially s of x times the thickness
+
+122
+00:12:05,560 --> 00:12:08,160
+of this very
+thin slice, and the thickness would be
+
+123
+00:12:08,160 --> 00:12:15,570
+delta x0 dx if you take a limit with more
+and more slices.
+
+124
+00:12:15,570 --> 00:12:26,550
+OK, so the volume will be the integral of
+s of x dx from,
+
+125
+00:12:26,550 --> 00:12:34,490
+well, what should be the range for x?
+Well, we would have to start at the very lowest
+
+126
+00:12:34,490 --> 00:12:37,860
+value of x that
+ever happens in our origin, and we'd have
+
+127
+00:12:37,860 --> 00:12:41,600
+to go all the way
+to the very largest value of x, from the very
+
+128
+00:12:41,600 --> 00:12:46,900
+far back to the
+very far front. So, in this picture,
+
+129
+00:12:46,900 --> 00:12:53,480
+we probably start over here at the back, and
+we'd end over here
+
+130
+00:12:53,480 --> 00:13:12,730
+at the front. So, let me just say from the
+minimum, x, to the maximum x. 
+And now, how do we find S of x?
+
+131
+00:13:12,730 --> 00:13:19,600
+Well, S of x will be actually again an integral.
+But now, it's an integral of the variable,
+
+132
+00:13:19,600 --> 00:13:23,290
+y, because when we look at this slice, what
+changes from left to
+
+133
+00:13:23,290 --> 00:13:39,080
+right is y. So, well let me actually write
+that down. For a given,
+
+134
+00:13:39,080 --> 00:13:46,440
+x, the area S of x you can compute as an integral
+of f of
+
+135
+00:13:46,440 --> 00:13:57,480
+x, y dy. OK, well, now x is a constant,
+and y will be the variable of integration.
+
+136
+00:13:57,480 --> 00:14:01,370
+What's the range for y? Well, it's from the
+leftmost
+
+137
+00:14:01,370 --> 00:14:05,370
+point here to the rightmost point here on
+the given slice.
+
+138
+00:14:05,370 --> 00:14:08,880
+So, there is a big catch here. That's a very
+important thing
+
+139
+00:14:08,880 --> 00:14:13,600
+to remember. What is the range of
+integration? The range of integration for
+
+140
+00:14:13,600 --> 00:14:18,000
+y
+depends actually on x. See, if I take the
+
+141
+00:14:18,000 --> 00:14:23,670
+slice that's
+pictured on that diagram, then the range for
+
+142
+00:14:23,670 --> 00:14:26,110
+y goes all
+the way from the very left to the very right.
+
+143
+00:14:26,110 --> 00:14:30,070
+But, if I take a slice that, say, near the
+very front,
+
+144
+00:14:30,070 --> 00:14:32,560
+then in fact, only a very small segment of
+it
+
+145
+00:14:32,560 --> 00:14:36,370
+will be in my region. So, the range of values
+for y
+
+146
+00:14:36,370 --> 00:14:39,320
+will be much less. Let me actually draw a
+2D
+
+147
+00:14:39,320 --> 00:14:48,320
+picture for that. So, remember,
+we fix x, so, sorry, so we fix a value of
+
+148
+00:14:48,320 --> 00:14:54,089
+x.
+OK, and for a given value of x, what we will
+
+149
+00:14:54,089 --> 00:14:58,720
+do is we'll slice
+our graph by this plane parallel to the yz
+
+150
+00:14:58,720 --> 00:15:00,790
+plane.
+So, now we mention the graph is sitting above
+
+151
+00:15:00,790 --> 00:15:05,670
+that.
+OK, that's the region R. We have the region,
+
+152
+00:15:05,670 --> 00:15:10,779
+R, and I have the graph of a function above
+this region,
+
+153
+00:15:10,779 --> 00:15:18,140
+R. And, I'm trying to find the
+area between this segment and the graph above
+
+154
+00:15:18,140 --> 00:15:22,720
+it in this
+vertical plane. Well, to do that,
+
+155
+00:15:22,720 --> 00:15:33,310
+I have to integrate from y going from here
+to here.
+
+156
+00:15:33,310 --> 00:15:37,500
+I want the area of a piece that sits above
+this red segment.
+
+157
+00:15:37,500 --> 00:15:43,540
+And, so in particular, the endpoints,
+the extreme values for y depend on x because,
+
+158
+00:15:43,540 --> 00:15:52,510
+see, if I slice here instead,
+well, my bounds for y will be smaller.
+
+159
+00:15:52,510 --> 00:16:08,000
+OK, so now, if I put the two things together,
+what I will get -- -- 
+is actually a formula where I have
+
+160
+00:16:08,000 --> 00:16:24,390
+to integrate -- -- over x -- -- an integral
+over y.
+
+161
+00:16:24,390 --> 00:16:36,899
+OK, and so this is called an iterated integral
+because we
+
+162
+00:16:36,899 --> 00:16:57,680
+iterate twice the process of taking an integral.
+OK, so again, what's important to realize
+
+163
+00:16:57,680 --> 00:17:00,290
+here, I mean, I'm going to say that
+several times over the next few days but that's
+
+164
+00:17:00,290 --> 00:17:03,760
+because it's the
+single most important thing to remember about
+
+165
+00:17:03,760 --> 00:17:08,569
+double integrals,
+the bounds here are just going to be numbers,
+
+166
+00:17:08,569 --> 00:17:12,829
+OK, because the question I'm asking myself
+here is,
+
+167
+00:17:12,829 --> 00:17:16,209
+what is the first value of x by which I might
+want to slice,
+
+168
+00:17:16,209 --> 00:17:20,829
+and what is the last value of x? Which range
+of x do I want to
+
+169
+00:17:20,829 --> 00:17:24,660
+look at to take my red slices? And, the answer
+is I would go
+
+170
+00:17:24,660 --> 00:17:34,840
+all the way from here, that's my first slice,
+to somewhere here. That's my last slice.
+
+171
+00:17:34,840 --> 00:17:37,920
+For any value in between these, I will have
+some red segment,
+
+172
+00:17:37,920 --> 00:17:44,429
+and I will want to integrate over that that.
+On the other hand here, the bounds will depend
+
+173
+00:17:44,429 --> 00:17:47,910
+on the
+outer variable, x,
+
+174
+00:17:47,910 --> 00:17:52,870
+because at a fixed value of x, what the values
+of y will be
+
+175
+00:17:52,870 --> 00:18:00,240
+depends on x in general. OK, so I think we
+should do
+
+176
+00:18:00,240 --> 00:18:07,760
+lots of examples to convince ourselves and
+see how it works.
+
+177
+00:18:07,760 --> 00:18:13,800
+Yeah, it's called an iterated integral because
+first we
+
+178
+00:18:13,800 --> 00:18:20,950
+integrated over y, and then we integrate again
+over x, OK? So, we can do that,
+
+179
+00:18:20,950 --> 00:18:26,690
+well, I mean, y depends on x or x depends,
+no, actually x and y vary independently of
+
+180
+00:18:26,690 --> 00:18:30,390
+each other
+inside here. What is more complicated is how
+
+181
+00:18:30,390 --> 00:18:36,130
+the bounds on y depend on x. But actually,
+you could also do the other way around: first
+
+182
+00:18:36,130 --> 00:18:38,880
+integrate over x,
+and then over y, and then the bounds for x
+
+183
+00:18:38,880 --> 00:18:44,730
+will
+depend on y. We'll see that on an example.
+
+184
+00:18:44,730 --> 00:18:55,620
+Yes? So, for y, I'm using the range
+of values for y that corresponds to the given
+
+185
+00:18:55,620 --> 00:19:01,150
+value of x,
+OK? Remember, this is just like a
+
+186
+00:19:01,150 --> 00:19:03,630
+plot in the xy plane. Above that, we have
+the graph.
+
+187
+00:19:03,630 --> 00:19:09,020
+Maybe I should draw a picture here instead.
+For a given value of x, so that's a given
+
+188
+00:19:09,020 --> 00:19:11,960
+slice,
+I have a range of values for y, that is,
+
+189
+00:19:11,960 --> 00:19:16,160
+from this picture at the leftmost point on
+that slice to
+
+190
+00:19:16,160 --> 00:19:21,809
+the rightmost point on that slice.
+So, where start and where I stop depends on
+
+191
+00:19:21,809 --> 00:19:28,929
+the value of x.
+Does that make sense? OK.
+
+192
+00:19:28,929 --> 00:19:40,610
+OK, no more questions? OK, so let's do our
+first
+
+193
+00:19:40,610 --> 00:19:56,270
+example. So, let's say that we want to
+integrate the function 1-x^2-y^2 over the
+
+194
+00:19:56,270 --> 00:20:04,890
+region defined by x
+between 0 and 1, and y between 0 and 1.
+
+195
+00:20:04,890 --> 00:20:14,950
+So, what does that mean geometrically?
+Well, z = 1-x^2-y^2, and it's a variation
+
+196
+00:20:14,950 --> 00:20:18,250
+on,
+actually I think we plotted that one, right?
+
+197
+00:20:18,250 --> 00:20:21,360
+That was our first example of a function of
+two variables
+
+198
+00:20:21,360 --> 00:20:26,929
+possibly. And, so, we saw that the graph
+is this paraboloid pointing downwards.
+
+199
+00:20:26,929 --> 00:20:31,799
+OK, it's what you get by taking a parabola
+and rotating it.
+
+200
+00:20:31,799 --> 00:20:35,830
+And now, what we are asking is, what is the
+volume between the
+
+201
+00:20:35,830 --> 00:20:39,620
+paraboloid and the xy plane over the square
+of side one in the xy
+
+202
+00:20:39,620 --> 00:20:43,460
+plane over the square of side one in the xy
+plane,
+
+203
+00:20:43,460 --> 00:20:49,390
+x and y between zero and one. OK, so, what
+we'll do is we'll,
+
+204
+00:20:49,390 --> 00:20:59,010
+so, see, here I try to represent the square.
+And, we'll just sum the areas of the slices
+
+205
+00:20:59,010 --> 00:21:03,049
+as,
+say, x varies from zero to one. And here,
+
+206
+00:21:03,049 --> 00:21:05,270
+of course,
+setting up the bounds will be easy because
+
+207
+00:21:05,270 --> 00:21:09,860
+no matter what x I
+take, y still goes from zero to one.
+
+208
+00:21:09,860 --> 00:21:14,090
+See, it's easiest to do double integrals what
+the region is
+
+209
+00:21:14,090 --> 00:21:17,220
+just a rectangle on the xy plane because then
+you don't have to
+
+210
+00:21:17,220 --> 00:21:28,700
+worry too much about what are the ranges.
+OK, so let's do it. Well, that would be the
+
+211
+00:21:28,700 --> 00:21:34,710
+integral from zero to one of the integral
+from zero to one of
+
+212
+00:21:34,710 --> 00:21:44,670
+1-x^2-y^2 dy dx. So, I'm dropping the
+parentheses. But, if you still want to see
+
+213
+00:21:44,670 --> 00:21:48,860
+them, I'm going to put that in very thin so
+that you see what
+
+214
+00:21:48,860 --> 00:21:52,480
+it means. But, actually,
+the convention is we won't put this parentheses
+
+215
+00:21:52,480 --> 00:21:56,360
+in there
+anymore. OK, so what this means is first
+
+216
+00:21:56,360 --> 00:22:01,870
+I will integrate 1-x^2-y^2 over y, ranging
+from zero to one with
+
+217
+00:22:01,870 --> 00:22:06,250
+x held fixed. So, what that represents is
+the
+
+218
+00:22:06,250 --> 00:22:13,280
+area in this slice. So, see here,
+I've drawn, well, what happens is actually
+
+219
+00:22:13,280 --> 00:22:15,570
+the
+function takes positive and negative values.
+
+220
+00:22:15,570 --> 00:22:20,490
+So, in fact, I will be counting positively
+this part of the area. And, I will be counting
+
+221
+00:22:20,490 --> 00:22:32,110
+negatively this part of the area, I mean,
+as usual when I do an integral. OK, so what
+
+222
+00:22:32,110 --> 00:22:37,880
+I will do to
+evaluate this, I will first do what's called
+
+223
+00:22:37,880 --> 00:22:52,510
+the inner integral. So, to do the inner integral,
+well, it's pretty easy. How do I integrate
+
+224
+00:22:52,510 --> 00:22:57,429
+this?
+Well, it becomes, so, what's the integral
+
+225
+00:22:57,429 --> 00:23:01,200
+of one?
+It's y. Just anything to remember is we
+
+226
+00:23:01,200 --> 00:23:06,160
+are integrating this with respect to y,
+not to x. The integral of x^2 is x^2
+
+227
+00:23:06,160 --> 00:23:17,600
+times y. And, the integral of y^2 is y^3
+over 3. OK, and that we plug in the
+
+228
+00:23:17,600 --> 00:23:23,980
+bounds, which are zero and one in this case.
+And so, when you plug y equals one, you will
+
+229
+00:23:23,980 --> 00:23:33,480
+get one minus x^2
+minus one third minus, well, for y equals
+
+230
+00:23:33,480 --> 00:23:37,920
+zero you get
+0,0, 0, so nothing changes. OK, so you are
+
+231
+00:23:37,920 --> 00:23:43,970
+left with two
+thirds minus x^2. OK, and that's a function
+
+232
+00:23:43,970 --> 00:23:47,429
+of x
+only. Here, you shouldn't see any y's
+
+233
+00:23:47,429 --> 00:23:52,390
+anymore because y was your integration variable.
+But, you still have x. You still have x because
+
+234
+00:23:52,390 --> 00:23:55,929
+the
+area of this shaded slice depends, of course,
+
+235
+00:23:55,929 --> 00:24:06,870
+on the value of x. And, so now,
+the second thing to do is to do the outer
+
+236
+00:24:06,870 --> 00:24:15,690
+integral.
+So, now we integrate from zero to one what
+
+237
+00:24:15,690 --> 00:24:20,490
+we got,
+which is two thirds minus x^2 dx.
+
+238
+00:24:20,490 --> 00:24:25,350
+OK, and we know how to compute that because
+that integrates to
+
+239
+00:24:25,350 --> 00:24:30,830
+two thirds x minus one third x^3 between zero
+and one.
+
+240
+00:24:30,830 --> 00:24:39,690
+And, I'll let you do the computation.
+You will find it's one third. OK, so that's
+
+241
+00:24:39,690 --> 00:24:45,720
+the final answer.
+So, that's the general pattern. When we have
+
+242
+00:24:45,720 --> 00:24:48,990
+a double integral
+to compute, first we want to set it up carefully.
+
+243
+00:24:48,990 --> 00:24:51,390
+We want to find, what will be the bounds in
+x
+
+244
+00:24:51,390 --> 00:24:55,929
+and y? And here, that was actually
+pretty easy because our equation was very
+
+245
+00:24:55,929 --> 00:25:00,030
+simple.
+Then, we want to compute the inner integral,
+
+246
+00:25:00,030 --> 00:25:06,799
+and then we compute the outer integral.
+And, that's it. OK, any questions at this
+
+247
+00:25:06,799 --> 00:25:16,419
+point?
+No? OK, so, by the way,
+
+248
+00:25:16,419 --> 00:25:24,240
+we started with dA in the notation, right?
+Here we had dA. And, that somehow became a
+
+249
+00:25:24,240 --> 00:25:28,950
+dy
+dx. OK,
+
+250
+00:25:28,950 --> 00:25:39,130
+so, dA became dy dx because when we
+do the iterated integral this way,
+
+251
+00:25:39,130 --> 00:25:43,320
+what we're actually doing is that we are slicing
+our origin
+
+252
+00:25:43,320 --> 00:25:48,919
+into small rectangles. OK, that was the area
+of this
+
+253
+00:25:48,919 --> 00:25:52,380
+small rectangle here? Well, it's the product
+of its
+
+254
+00:25:52,380 --> 00:25:57,169
+width times its height. So, that's delta x
+times delta
+
+255
+00:25:57,169 --> 00:26:05,059
+y. OK, so, delta a equals delta x
+delta y becomes... So actually,
+
+256
+00:26:05,059 --> 00:26:26,980
+it's not just becomes, it's really equal.
+So, the small rectangles for. Now, it became
+
+257
+00:26:26,980 --> 00:26:30,309
+dy dx and not dx
+dy. Well, that's a question of,
+
+258
+00:26:30,309 --> 00:26:34,690
+in which order we do the iterated integral?
+It's up to us to decide whether we want to
+
+259
+00:26:34,690 --> 00:26:37,710
+integrate x first,
+then y, or y first, then x.
+
+260
+00:26:37,710 --> 00:26:41,669
+But, as we'll see very soon, that is an important
+decision
+
+261
+00:26:41,669 --> 00:26:44,000
+when it comes to setting up the bounds of
+integration.
+
+262
+00:26:44,000 --> 00:26:46,090
+Here, it doesn't matter, but in general we
+have to be
+
+263
+00:26:46,090 --> 00:26:57,710
+very careful about in which order we 
+will do things.
+Yes? Well, in principle it always
+
+264
+00:26:57,710 --> 00:27:03,070
+works both ways. Sometimes it will be that
+because the region has a strange shape, you
+
+265
+00:27:03,070 --> 00:27:07,000
+can actually set it
+up more easily one way or the other.
+
+266
+00:27:07,000 --> 00:27:09,850
+Sometimes it will also be that the function
+here,
+
+267
+00:27:09,850 --> 00:27:12,000
+you actually know how to integrate in one
+way,
+
+268
+00:27:12,000 --> 00:27:15,110
+but not the other. So, the theory is that
+it
+
+269
+00:27:15,110 --> 00:27:24,880
+should work both ways. In practice,
+one of the two calculations may be much harder.
+
+270
+00:27:24,880 --> 00:27:37,850
+OK. Let's do another example.
+Let's say that what I wanted to know was not
+
+271
+00:27:37,850 --> 00:27:42,400
+actually what I
+computed, namely, the volume below the
+
+272
+00:27:42,400 --> 00:27:48,740
+paraboloid, but also the negative of some
+part that's now in the corner towards me.
+
+273
+00:27:48,740 --> 00:27:51,679
+But let's say really what I wanted was just
+the volume
+
+274
+00:27:51,679 --> 00:27:55,940
+between the paraboloid and the xy plane,
+so looking only at the part of it that sits
+
+275
+00:27:55,940 --> 00:27:59,870
+above the xy plane.
+So, that means, instead of integrating over
+
+276
+00:27:59,870 --> 00:28:03,000
+the
+entire square of size one, I should just integrate
+
+277
+00:28:03,000 --> 00:28:08,010
+over
+the quarter disk. I should stop integrating
+
+278
+00:28:08,010 --> 00:28:14,510
+where
+my paraboloid hits the xy plane. So, let me
+
+279
+00:28:14,510 --> 00:28:20,240
+draw another picture.
+So, let's say I wanted to integrate, actually
+
+280
+00:28:20,240 --> 00:28:35,549
+-- So,
+let's call this example two. So, we are going
+
+281
+00:28:35,549 --> 00:28:38,559
+to do the same
+function but over a different region.
+
+282
+00:28:38,559 --> 00:28:43,840
+And, the region will just be, now, this quarter
+disk here.
+
+283
+00:28:43,840 --> 00:28:55,660
+OK, so maybe I should draw a picture on the
+xy plane.
+
+284
+00:28:55,660 --> 00:29:17,590
+That's your region, R. OK, so in principle,
+it will be the same integral. But what changes
+
+285
+00:29:17,590 --> 00:29:21,470
+is the bounds.
+Why do the bounds change? Well, the bounds
+
+286
+00:29:21,470 --> 00:29:27,400
+change because
+now if I set, if I fixed some value of x,
+
+287
+00:29:27,400 --> 00:29:30,910
+then I want to integrate this part of the
+slice that's above
+
+288
+00:29:30,910 --> 00:29:35,400
+the xy plane and I don't want to take this
+part that's actually
+
+289
+00:29:35,400 --> 00:29:41,799
+outside of my disk. So, I should stop integrating
+over y when y reaches this value here.
+
+290
+00:29:41,799 --> 00:29:50,880
+OK, on that picture here, on this picture,
+it tells me for a fixed value of x, the range
+
+291
+00:29:50,880 --> 00:29:55,270
+of values for y
+should go only from here to here.
+
+292
+00:29:55,270 --> 00:30:12,250
+So, that's from here to less than one.
+OK, so for a given, x, the range of y is,
+
+293
+00:30:12,250 --> 00:30:16,320
+well, so what's the lowest value of y that
+we want to look
+
+294
+00:30:16,320 --> 00:30:23,679
+at? It's still zero.
+From y equals zero to,what's the value of
+
+295
+00:30:23,679 --> 00:30:26,780
+y here?
+Well, I have to solve in the equation of a
+
+296
+00:30:26,780 --> 00:30:32,330
+circle,
+OK? So, if I'm here,
+
+297
+00:30:32,330 --> 00:30:38,330
+this is x^2 y^2 equals one. That means y is
+square root of
+
+298
+00:30:38,330 --> 00:30:44,070
+one minus x^2. OK, so I will integrate from
+y
+
+299
+00:30:44,070 --> 00:30:47,970
+equals zero to y equals square root of one
+minus x^2.
+
+300
+00:30:47,970 --> 00:30:51,830
+And, now you see how the bound from y will
+depend on the value
+
+301
+00:30:51,830 --> 00:30:59,450
+of x. OK, so while I erase,
+I will let you think about, what is the bound
+
+302
+00:30:59,450 --> 00:31:21,620
+for x now?
+It's a trick question.
+
+303
+00:31:21,620 --> 00:31:50,940
+OK, so I claim that what we will do -- We
+write this as an
+
+304
+00:31:50,940 --> 00:32:00,600
+iterated integral first dy then dx.
+And, we said for a fixed value of x, the range
+
+305
+00:32:00,600 --> 00:32:09,610
+for y is from
+zero to square root of one minus x^2.
+
+306
+00:32:09,610 --> 00:32:13,280
+What about the range for x? Well, the range
+for x should
+
+307
+00:32:13,280 --> 00:32:18,380
+just be numbers. OK, remember,
+the question I have to ask now is if I look
+
+308
+00:32:18,380 --> 00:32:21,679
+at all of these
+yellow slices, which one is the first one
+
+309
+00:32:21,679 --> 00:32:23,480
+that
+I will consider? Which one is the last one
+
+310
+00:32:23,480 --> 00:32:26,330
+that
+I want to consider? So, the smallest value
+
+311
+00:32:26,330 --> 00:32:30,330
+of x
+that I want to consider is zero again.
+
+312
+00:32:30,330 --> 00:32:33,610
+And then, I will have actually a pretty big
+slice.
+
+313
+00:32:33,610 --> 00:32:36,570
+And I will get smaller, and smaller,
+and smaller slices. And, it stops.
+
+314
+00:32:36,570 --> 00:32:42,490
+I have to stop when x equals one.
+Afterwards, there's nothing else to integrate.
+
+315
+00:32:42,490 --> 00:32:53,850
+So, x goes from zero to one. OK, and now,
+see how in the inner integral, the bounds
+
+316
+00:32:53,850 --> 00:32:54,799
+depend on in the
+inner integral, the bounds depend on x.
+
+317
+00:32:54,799 --> 00:33:00,740
+In the outer one, you just get numbers because
+the questions that you have to ask to set
+
+318
+00:33:00,740 --> 00:33:04,580
+up this one and set
+up that one are different. Here, the question
+
+319
+00:33:04,580 --> 00:33:07,429
+is,
+if I fix a given, x, if I look at a given
+
+320
+00:33:07,429 --> 00:33:10,780
+slice,
+what's the range for y? Here, the question
+
+321
+00:33:10,780 --> 00:33:15,960
+is,
+what's the first slice? What is the last slice?
+
+322
+00:33:15,960 --> 00:33:20,750
+Does that make sense? Everyone happy with
+that?
+
+323
+00:33:20,750 --> 00:33:28,730
+OK, very good. So, now, how do we compute
+that?
+
+324
+00:33:28,730 --> 00:33:34,520
+Well, we do the inner integral. So, that's
+an integral from
+
+325
+00:33:34,520 --> 00:33:41,299
+zero to square root of one minus x^2 of one
+minus x^2 minus y^2
+
+326
+00:33:41,299 --> 00:33:52,919
+dy. And, well, that integrates to
+y-x^2y-y^3 over three from zero to square
+
+327
+00:33:52,919 --> 00:34:05,150
+root of one minus x^2.
+And then, that becomes, well, the root of
+
+328
+00:34:05,150 --> 00:34:12,909
+one minus x^2
+minus x^2 root of one minus x^2 minus y minus
+
+329
+00:34:12,909 --> 00:34:16,269
+x^2 to the three
+halves over three. And actually,
+
+330
+00:34:16,269 --> 00:34:20,129
+if you look at it for long enough, see, this
+says one minus
+
+331
+00:34:20,129 --> 00:34:24,569
+x^2 times square root of one minus x^2.
+So, actually, that's also,
+
+332
+00:34:24,569 --> 00:34:33,179
+so, in fact, that simplifies to two thirds
+of one minus x^2 to the three halves.
+
+333
+00:34:33,179 --> 00:34:53,589
+OK, let me redo that, maybe, slightly differently.
+This was one minus x^2 times y. So -- -- 
+one minus x^2 times y
+
+334
+00:34:53,589 --> 00:35:02,380
+becomes square root of one minus x^2 minus
+y^3 over three.
+
+335
+00:35:02,380 --> 00:35:04,469
+And then, when I take y equals zero, I get
+zero.
+
+336
+00:35:04,469 --> 00:35:07,680
+So, I don't subtract anything. OK, so now
+you see this is one
+
+337
+00:35:07,680 --> 00:35:10,999
+minus x^2 to the three halves minus a third
+of it.
+
+338
+00:35:10,999 --> 00:35:21,079
+So, you're left with two thirds. OK, so, that's
+the integral.
+
+339
+00:35:21,079 --> 00:35:25,239
+The outer integral is the integral from zero
+to one of two
+
+340
+00:35:25,239 --> 00:35:32,099
+thirds of one minus x^2 to the three halves
+dx.
+
+341
+00:35:32,099 --> 00:35:41,089
+And, well,
+I let you see if you remember single variable
+
+342
+00:35:41,089 --> 00:35:44,190
+integrals by
+trying to figure out what this actually comes
+
+343
+00:35:44,190 --> 00:35:51,670
+out to be is it
+pi over two, or pi over eight, actually?
+
+344
+00:35:51,670 --> 00:36:09,779
+I think it's pi over eight. OK, well I guess
+we have to do
+
+345
+00:36:09,779 --> 00:36:16,440
+it then. I wrote something on my notes,
+but it's not very clear, OK?
+
+346
+00:36:16,440 --> 00:36:19,450
+So, how do we compute this thing?
+Well, we have to do trig substitution.
+
+347
+00:36:19,450 --> 00:36:23,180
+That's the only way I know to compute an integral
+like that,
+
+348
+00:36:23,180 --> 00:36:33,200
+OK? So, we'll set x equal sine
+theta, and then square root of one minus x^2
+
+349
+00:36:33,200 --> 00:36:38,039
+will be cosine
+theta. We are using sine squared plus
+
+350
+00:36:38,039 --> 00:36:46,660
+cosine squared equals one. And, so that will
+become -- --
+
+351
+00:36:46,660 --> 00:37:02,369
+so, two thirds remains two thirds.
+One minus x^2 to the three halves becomes
+
+352
+00:37:02,369 --> 00:37:09,450
+cosine cubed
+theta. dx, well, if x is sine theta,
+
+353
+00:37:09,450 --> 00:37:16,869
+then dx is cosine theta d theta.
+So, that's cosine theta d theta. And,
+
+354
+00:37:16,869 --> 00:37:20,650
+well, if you do things with substitution,
+which is the way I do them, then you should
+
+355
+00:37:20,650 --> 00:37:24,450
+worry about the
+bounds for theta which will be zero to pi
+
+356
+00:37:24,450 --> 00:37:27,319
+over two.
+Or, you can also just plug in the bounds at
+
+357
+00:37:27,319 --> 00:37:34,559
+the end.
+So, now you have the two thirds times the
+
+358
+00:37:34,559 --> 00:37:40,039
+integral from zero to
+pi over two of cosine to the fourth theta
+
+359
+00:37:40,039 --> 00:37:43,589
+d theta.
+And, how do you integrate that? Well, you
+
+360
+00:37:43,589 --> 00:37:54,430
+have to use double
+angle formulas. OK, so cosine to the fourth,
+
+361
+00:37:54,430 --> 00:38:02,779
+remember, cosine squared theta is one plus
+cosine two theta
+
+362
+00:38:02,779 --> 00:38:18,859
+over two. And, we want the square of that.
+And, so that will give us -- -- of,
+
+363
+00:38:18,859 --> 00:38:29,339
+well, we'll have, it's actually one quarter
+plus
+
+364
+00:38:29,339 --> 00:38:34,319
+one half cosine to theta plus one quarter
+cosine square to
+
+365
+00:38:34,319 --> 00:38:42,359
+theta d theta. And, how will you handle this
+guy? Well, using,
+
+366
+00:38:42,359 --> 00:38:49,599
+again, the double angle formula.
+OK, so it's getting slightly nasty.
+
+367
+00:38:49,599 --> 00:38:54,769
+So, but I don't know any simpler solution
+except for one
+
+368
+00:38:54,769 --> 00:38:56,799
+simpler solution, which is you have a table
+of
+
+369
+00:38:56,799 --> 00:39:08,519
+integrals of this form inside the notes.
+Yes? No, I don't think so because if
+
+370
+00:39:08,519 --> 00:39:10,759
+you take one half times cosine half times
+two,
+
+371
+00:39:10,759 --> 00:39:18,539
+you will still have half, OK?
+So, if you do, again, the double angle
+
+372
+00:39:18,539 --> 00:39:22,269
+formula, I think I'm not going to bother to
+do it.
+
+373
+00:39:22,269 --> 00:39:28,130
+I claim you will get, at the end, pi over
+eight
+
+374
+00:39:28,130 --> 00:39:51,079
+because I say so. OK, so exercise,
+continue calculating and get pi over eight.
+
+375
+00:39:51,079 --> 00:39:56,930
+OK, now what does the show us? Well, this
+shows us,
+
+376
+00:39:56,930 --> 00:39:59,359
+actually, that this is probably not the right
+way to do this.
+
+377
+00:39:59,359 --> 00:40:02,119
+OK, the right way to do this will be to integrate
+it in polar
+
+378
+00:40:02,119 --> 00:40:09,450
+coordinates. And, that's what we will learn
+how to do tomorrow. So, we will actually see
+
+379
+00:40:09,450 --> 00:40:24,049
+how to
+do it with much less trig.
+
+380
+00:40:24,049 --> 00:40:49,559
+So, that will be easier in polar coordinates.
+So, we will see that tomorrow. OK, so we are
+
+381
+00:40:49,559 --> 00:40:52,529
+almost there.
+I mean, here you just use a double angle again
+
+382
+00:40:52,529 --> 00:40:55,019
+and then you
+can get it. And, it's pretty
+
+383
+00:40:55,019 --> 00:40:59,569
+straightforward. OK, so one thing that's kind
+of
+
+384
+00:40:59,569 --> 00:41:04,009
+interesting to know is we can exchange the
+order of
+
+385
+00:41:04,009 --> 00:41:13,180
+integration. Say we have an integral given
+to us in the order dy dx, we can switch it
+
+386
+00:41:13,180 --> 00:41:16,759
+to dx dy.
+But, we have to be extremely careful with
+
+387
+00:41:16,759 --> 00:41:21,940
+the bounds.
+So, you certainly cannot just swap the bounds
+
+388
+00:41:21,940 --> 00:41:25,959
+of the inner and
+outer because there you would end up having
+
+389
+00:41:25,959 --> 00:41:29,130
+this square root
+of one minus x^2 on the outside, and you would
+
+390
+00:41:29,130 --> 00:41:33,459
+never get a
+number out of that. So, that cannot work.
+
+391
+00:41:33,459 --> 00:41:41,170
+It's more complicated than that. OK, so, well,
+here's a first baby example. Certainly, if
+
+392
+00:41:41,170 --> 00:41:44,579
+I do integral
+from zero to one, integral from zero to two
+
+393
+00:41:44,579 --> 00:41:51,400
+dx
+dy, there, I can certainly switch the bounds
+
+394
+00:41:51,400 --> 00:41:54,140
+without
+thinking too much. What's the reason for that?
+
+395
+00:41:54,140 --> 00:41:58,619
+Well, the reason for that is this corresponds
+in both cases
+
+396
+00:41:58,619 --> 00:42:04,950
+to integrating x from zero to two, and y from
+zero to one.
+
+397
+00:42:04,950 --> 00:42:11,079
+It's a rectangle. So, if I slice it this way,
+you see that y goes from zero to one for any
+
+398
+00:42:11,079 --> 00:42:13,869
+x between zero
+and two. It's this guy.
+
+399
+00:42:13,869 --> 00:42:20,160
+If I slice it that way, then x goes from zero
+to two
+
+400
+00:42:20,160 --> 00:42:25,650
+for any value of y between zero and one.
+And, it's this one. So, here it works.
+
+401
+00:42:25,650 --> 00:42:27,440
+But in general, I have to draw picture of
+my
+
+402
+00:42:27,440 --> 00:42:31,660
+region, and see how the slices look like both
+ways.
+
+403
+00:42:31,660 --> 00:42:44,259
+OK, so let's do a more interesting one.
+Let's say that I want to compute an integral
+
+404
+00:42:44,259 --> 00:42:49,700
+from zero to
+one of integral from x to square root of x
+
+405
+00:42:49,700 --> 00:42:57,900
+of e^y over y dy dx.
+So, why did I choose this guy? Which is the
+
+406
+00:42:57,900 --> 00:43:00,950
+guy because as far
+as I can tell, there's no way to integrate
+
+407
+00:43:00,950 --> 00:43:05,239
+e^y
+over y. So, this is an integral that
+
+408
+00:43:05,239 --> 00:43:09,859
+you cannot compute this way. So, it's a good
+example for why
+
+409
+00:43:09,859 --> 00:43:12,890
+this can be useful. So, if you do it this
+way,
+
+410
+00:43:12,890 --> 00:43:15,979
+you are stuck immediately. So, instead,
+we will try to switch the order.
+
+411
+00:43:15,979 --> 00:43:23,969
+But, to switch the order, we have to understand,
+what do these bounds mean? OK, so let's draw
+
+412
+00:43:23,969 --> 00:43:29,829
+a picture of
+the region. Well what I am saying is y
+
+413
+00:43:29,829 --> 00:43:39,279
+equals x to y equals square root of x.
+Well, let's draw y equals x, and y equals
+
+414
+00:43:39,279 --> 00:43:51,160
+square root of x.
+Well, maybe I should actually put this here,
+
+415
+00:43:51,160 --> 00:44:01,380
+y equals x to y equals square root of x.
+OK, and so I will go, for each value of x
+
+416
+00:44:01,380 --> 00:44:05,569
+I will go
+from y equals xo to y equals square root of
+
+417
+00:44:05,569 --> 00:44:08,910
+x.
+And then, we'll do that for values of x that
+
+418
+00:44:08,910 --> 00:44:13,799
+go from x
+equals zero to x equals one, which happens
+
+419
+00:44:13,799 --> 00:44:19,630
+to be exactly
+where these things intersect. So, my region
+
+420
+00:44:19,630 --> 00:44:25,849
+will consist of
+all this, OK? So now, if I want to do it the
+
+421
+00:44:25,849 --> 00:44:33,209
+other way around, I have to decompose my region.
+The other way around, I have to, so my goal,
+
+422
+00:44:33,209 --> 00:44:36,549
+now, is to rewrite this as an integral.
+Well, it's still the same function.
+
+423
+00:44:36,549 --> 00:44:40,950
+It's still e to the y over y. But now, I want
+to integrate dx
+
+424
+00:44:40,950 --> 00:44:49,450
+dy. So, how do I integrate over x?
+Well, I fix a value of y. And, for that value
+
+425
+00:44:49,450 --> 00:44:51,650
+of y,
+what's the range of x? Well, the range for
+
+426
+00:44:51,650 --> 00:44:57,479
+x is from
+here to here. OK, what's the value of x here?
+
+427
+00:44:57,479 --> 00:45:02,559
+Let's start with an easy one. This is x equals
+y.
+
+428
+00:45:02,559 --> 00:45:14,950
+What about this one? It's x equals y^2.
+OK, so, x goes from y2 to y, and then what
+
+429
+00:45:14,950 --> 00:45:18,719
+about y?
+Well, I have to start at the bottom of my
+
+430
+00:45:18,719 --> 00:45:22,529
+region.
+That's y equals zero to the top, which is
+
+431
+00:45:22,529 --> 00:45:30,569
+at y equals one.
+So, y goes from zero to one. So, switching
+
+432
+00:45:30,569 --> 00:45:34,229
+the bounds is not
+completely obvious. That took a little bit
+
+433
+00:45:34,229 --> 00:45:39,299
+of work.
+But now that we've done that, well,
+
+434
+00:45:39,299 --> 00:45:42,769
+just to see how it goes, it's actually going
+to be much
+
+435
+00:45:42,769 --> 00:45:50,640
+easier to integrate because the inner integral,
+well, what's the integral of e^y over y with
+
+436
+00:45:50,640 --> 00:45:59,109
+respect to x?
+It's just that times x, right, from x equals
+
+437
+00:45:59,109 --> 00:46:03,579
+y^2 to y.
+So, that will be, well, if I plug x equals
+
+438
+00:46:03,579 --> 00:46:08,759
+y,
+I will get e to the y minus, if I plug x equals
+
+439
+00:46:08,759 --> 00:46:13,719
+y^2,
+I will get e to the y over y times y^2 into
+
+440
+00:46:13,719 --> 00:46:18,630
+the y times y,
+OK? So, now, if I do the outer
+
+441
+00:46:18,630 --> 00:46:25,829
+integral, I will have the integral from zero
+to one of e
+
+442
+00:46:25,829 --> 00:46:32,569
+to the y minus y^e to the y dy. And, that
+one actually is a
+
+443
+00:46:32,569 --> 00:46:39,049
+little bit easier. So, we know how to integrate
+e^y. We don't quite know how to
+
+444
+00:46:39,049 --> 00:46:46,459
+integrate ye^y. But, let's try.
+So, let's see, what's the derivative of ye^y?
+
+445
+00:46:46,459 --> 00:46:55,920
+Well, there's a product rule that's one times
+e^y plus y
+
+446
+00:46:55,920 --> 00:47:03,239
+times the derivative of e^y is ye^y.
+So, if we do, OK, let's put a minus sign in
+
+447
+00:47:03,239 --> 00:47:07,380
+front. Well, that's almost what we
+want, except we have a minus e^y instead of
+
+448
+00:47:07,380 --> 00:47:14,130
+a plus e^y.
+So, we need to add 2e^y. And, I claim that's
+
+449
+00:47:14,130 --> 00:47:18,690
+the
+antiderivative. OK, if you got lost,
+
+450
+00:47:18,690 --> 00:47:22,989
+you can also integrate by integrating by parts,
+by taking the derivative of y and integrating
+
+451
+00:47:22,989 --> 00:47:28,349
+these guys.
+Or, but, you know, that works. Just, your
+
+452
+00:47:28,349 --> 00:47:32,029
+first guess would
+be, maybe, let's try minus y^e to the y.
+
+453
+00:47:32,029 --> 00:47:34,249
+Take the derivative of that, compare, see
+what you need to
+
+454
+00:47:34,249 --> 00:47:39,719
+do to fix. And so, if you take that
+between zero and one, you'll actually get
+
+455
+00:47:39,719 --> 00:47:43,549
+e minus
+two. OK,
+
+456
+00:47:43,549 --> 00:47:53,369
+so, tomorrow we are going to see
+how to do double integrals in polar coordinates,
+
+457
+00:47:53,369 --> 00:47:57,559
+and also applications of double integrals,
+how to use them for interesting things.
+
